@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="@@CSP@@">
+<title>Pi 维护实验室 · 运行审阅</title>
+<style>@@STYLE@@</style>
+</head>
+<body>
+<aside>
+  <div class="brand"><span class="brand-icon">π</span><div>维护实验室<small>REPOSITORY MAINTENANCE</small></div></div>
+  <div class="side-label">运行档案 <span id="run-count"></span></div>
+  <label class="sr-only" for="search">搜索任务或运行编号</label>
+  <input id="search" type="search" placeholder="搜索任务 / 运行编号">
+  <label class="sr-only" for="filter">筛选运行状态</label>
+  <select id="filter"><option value="all">全部状态</option><option value="candidate_ready">候选待审阅</option><option value="awaiting_approval">等待编辑批准</option><option value="rejected">已拒绝</option><option value="rolled_back">已回退</option><option value="discarded">已清理</option><option value="integrated">已发布分支</option></select>
+  <nav id="run-list" aria-label="运行列表"></nav>
+  <div class="side-footer"><span class="dot"></span> 离线 · 只读快照<small>Pi Agent 核心 / Git 安全维护层</small></div>
+</aside>
+<main>
+  <header><span>数媒竞赛 / 维护闭环</span><span class="badge">只读审阅</span></header>
+  <div class="intro"><div><p class="eyebrow">EVIDENCE BEFORE ACTION</p><h1>每次改动，都有依据。</h1><p>从失败测试到修复、审批和安全回退，查看完整运行证据。</p></div><div class="snapshot">导出时间<time id="generated"></time>导出后状态可能变化</div></div>
+  <div id="metrics" class="metrics"></div>
+  <div class="notice">这是历史证据快照，未核验当前 Git 状态。页面不会修改代码、调用模型或批准发布；实际操作请使用 CLI 重新核验。</div>
+  <section id="detail" aria-live="polite"></section>
+  <details class="licenses"><summary>开源组件与许可证</summary><p>差异查看复用 diff2html 3.4.56（MIT），含 diff（BSD-3-Clause）与 Hogan（Apache-2.0）。Pi 核心来源及本项目贡献见 THIRD_PARTY.md。</p><pre>@@LICENSE@@</pre></details>
+</main>
+<noscript>请启用 JavaScript 查看运行证据。本文件可离线打开。</noscript>
+<script id="evidence" type="application/json">@@DATA@@</script>
+<script>@@VENDOR@@</script>
+<script>@@APP@@</script>
+</body>
+</html>

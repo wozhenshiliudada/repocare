@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "runtime_authorized": false,
+  "purpose": "Draft interface examples only; not a live maintenance policy or approval",
+  "maintenance_policy": {
+    "id": "example-policy",
+    "version": 1,
+    "repository_id": "example-repository",
+    "branch": "main",
+    "mode": "autonomous_candidate",
+    "read_roots": ["checkout", "tests"],
+    "edit_roots": ["checkout"],
+    "protected_roots": ["tests", ".github", ".git"],
+    "denied_patterns": ["**/.env*", "**/*.pem", "**/*.key", "**/credentials*.json"],
+    "triggers": ["commit", "ci", "issue:repocare"],
+    "check_profiles": ["python-unittest-existing"],
+    "execution_backend": "trusted_authored_fixture",
+    "budget_ref": "example-existing-ledger",
+    "request_limit": null,
+    "candidate_round_limit": null,
+    "publication": "separate_decision"
+  },
+  "event": {
+    "repository_id": "example-repository",
+    "kind": "ci",
+    "source_id": "run-123",
+    "source_version": "attempt-1",
+    "target_sha": "1111111111111111111111111111111111111111",
+    "policy_version": 1,
+    "evidence_ref": "example-recorded-failure",
+    "received_at": "example-display-time"
+  },
+  "diagnosis": {
+    "target_sha": "1111111111111111111111111111111111111111",
+    "observed_failure": "reproduced_test_failure",
+    "evidence": [
+      {
+        "id": "e1",
+        "kind": "test_log_excerpt",
+        "source_ref": "example-recorded-failure",
+        "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+        "saved_range": {"unit": "line", "start": 1, "end": 12},
+        "truncated": true,
+        "entire_original_preserved": false
+      }
+    ],
+    "file_candidates": [
+      {"path": "checkout/discounts.py", "evidence_ids": ["e1"], "rank": 1,
+       "read_eligible": true, "edit_eligible": true}
+    ],
+    "test_candidates": [
+      {"profile": "python-unittest-existing", "verification": "not_run",
+       "argv": ["{python}", "-B", "-m", "unittest", "discover", "-s", "tests", "-v"]}
+    ],
+    "scope_delta": [],
+    "next_action": "plan",
+    "authorization_effect": "none",
+    "limits": {"complete_repository_scan": false, "search_truncated": false}
+  },
+  "execution_scope": {
+    "task_id": "example-new-task",
+    "policy_id": "example-policy",
+    "policy_version": 1,
+    "base_sha": "1111111111111111111111111111111111111111",
+    "editable_paths": ["checkout/discounts.py"],
+    "readonly_paths": ["checkout/api.py", "checkout/lines.py", "tests/test_checkout.py"],
+    "file_fingerprints": {"checkout/discounts.py": "3333333333333333333333333333333333333333333333333333333333333333"},
+    "tests": [["{python}", "-B", "-m", "unittest", "discover", "-s", "tests", "-v"]],
+    "budget_ref": "example-existing-ledger",
+    "approval_receipt": null,
+    "scope_revision": 1,
+    "status": "example_not_executable"
+  },
+  "result": {
+    "status": "example_unexecuted",
+    "target_sha": "1111111111111111111111111111111111111111",
+    "run_ref": null,
+    "checks_ref": null,
+    "usage_ref": "example-existing-ledger",
+    "report_ref": null,
+    "published": false
+  }
+}

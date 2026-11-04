@@ -1,0 +1,60 @@
+{
+  "name": "@colbymchenry/codegraph",
+  "version": "1.6.2",
+  "npm_git_head": "6560052a6f856855d3f71eee838fd66ccfa4285d",
+  "upstream_license_sha256": "e6d98f98c666bebe065ac2492a0a19232cc318d4d67bac3ca42ffb77bacc8809",
+  "visible_bundled_licenses": [
+    {
+      "file": "bundled-licenses/@clack/core/LICENSE",
+      "sha256": "6b3c03752a3f3642f33f48a6a335451cde679660671997dfc5415a7f26d1b449"
+    },
+    {
+      "file": "bundled-licenses/@clack/prompts/LICENSE",
+      "sha256": "6b3c03752a3f3642f33f48a6a335451cde679660671997dfc5415a7f26d1b449"
+    },
+    {
+      "file": "bundled-licenses/commander/LICENSE",
+      "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b"
+    },
+    {
+      "file": "bundled-licenses/fast-string-truncated-width/license",
+      "sha256": "2547dead17a32b1e49a588e943d52420b4d75f1349d9afd9ecb567b2dc8911c0"
+    },
+    {
+      "file": "bundled-licenses/fast-string-width/license",
+      "sha256": "2547dead17a32b1e49a588e943d52420b4d75f1349d9afd9ecb567b2dc8911c0"
+    },
+    {
+      "file": "bundled-licenses/fast-wrap-ansi/LICENSE",
+      "sha256": "9235f5ebfd80d41920fae7a0317caa3914f2a9249837bc486d7706f73080e375"
+    },
+    {
+      "file": "bundled-licenses/ignore/LICENSE-MIT",
+      "sha256": "9c94db23dc4b1e9aaee5d195668b916afc71efed54af226b66cf0ccc4389c1c0"
+    },
+    {
+      "file": "bundled-licenses/jsonc-parser/LICENSE.md",
+      "sha256": "c3a24c02d678e5f0711623dcf3ab3f243b273c2633f638a1fa8e35fb7c7f8e4d"
+    },
+    {
+      "file": "bundled-licenses/picomatch/LICENSE",
+      "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9"
+    },
+    {
+      "file": "bundled-licenses/sisteransi/license",
+      "sha256": "ade66f698fd417addc4d948a85ef33e8abb302daff6453feda18b191d250e54d"
+    },
+    {
+      "file": "bundled-licenses/tree-sitter-wasms/LICENSE",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "file": "bundled-licenses/web-tree-sitter/LICENSE",
+      "sha256": "5f9cf9fb6acb1972b35ae29119ce563bb60ec097656bc4b69b9bac2d04c7a147"
+    }
+  ],
+  "installed_file_bytes_this_windows_x64_run": 266306633,
+  "platform_npm_unpacked_size": 265095603,
+  "main_npm_unpacked_size": 1208076,
+  "complete_binary_grammar_sbom_audited": false
+}

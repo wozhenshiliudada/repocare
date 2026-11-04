@@ -1,0 +1,14 @@
+graft runtime/pi
+include examples/buggy_repo/.gitignore
+include examples/buggy_repo/calculator.py
+include examples/buggy_repo/tests/test_calculator.py
+prune runtime/pi/test
+prune runtime/pi/node_modules
+graft third_party/pi
+global-exclude .env
+global-exclude .env.*
+global-exclude *.local
+global-exclude *.pem
+global-exclude *.key
+global-exclude __pycache__
+global-exclude *.py[cod]

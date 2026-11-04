@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "selection": {
+    "repository_slug": "example/ci-contract-fixture",
+    "run_id": 1001,
+    "attempt": 1,
+    "job_id": 2001
+  },
+  "repository": {
+    "id": 9001,
+    "slug": "example/ci-contract-fixture"
+  },
+  "run": {
+    "id": 1001,
+    "attempt": 1,
+    "workflow_id": 3001,
+    "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "status": "completed",
+    "conclusion": "failure",
+    "source_url": "https://github.com/example/ci-contract-fixture/actions/runs/1001/attempts/1"
+  },
+  "evidence_status": "ready",
+  "observed_at": "2026-10-23T00:00:00Z",
+  "completed_at": "2026-10-23T00:00:01Z",
+  "jobs": [
+    {
+      "id": 2001,
+      "run_id": 1001,
+      "run_attempt": 1,
+      "provenance": {
+        "membership_source": "https://api.github.com/repos/example/ci-contract-fixture/actions/runs/1001/attempts/1/jobs?per_page=100&page=1",
+        "attempt_source": "verified_attempt_jobs_membership",
+        "detail_source": "https://api.github.com/repos/example/ci-contract-fixture/actions/jobs/2001",
+        "detail_attempt_source": "verified_attempt_jobs_membership"
+      },
+      "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "name": "checks (windows, 3.13)",
+      "status": "completed",
+      "conclusion": "failure",
+      "source_url": "https://github.com/example/ci-contract-fixture/actions/runs/1001/job/2001",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Run synthetic checks",
+          "status": "completed",
+          "conclusion": "failure"
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "total_jobs": 1,
+    "captured_jobs": 1,
+    "pages_read": 1,
+    "has_next": false,
+    "omitted_jobs": 0,
+    "steps_truncated": false
+  },
+  "log": {
+    "job_id": 2001,
+    "status": "captured",
+    "capture_range": "prefix",
+    "captured_bytes": 83,
+    "captured_sha256": "1e2f2c0f19c94da561abfae3681212f74a82b78888f9eb810696c33f05a7322a",
+    "hash_scope": "captured_raw_bytes_before_decode_redaction",
+    "remote_total_bytes": 83,
+    "capture_truncated": false,
+    "excerpt_truncated": false,
+    "line_truncated": false,
+    "decoding_replacement": false,
+    "controls_removed": false,
+    "tail_line_omitted": false,
+    "redacted": false,
+    "excerpt": "2026-10-23T00:00:00Z FAIL synthetic_example\nAssertionError: expected 2, received 3\n",
+    "source_url": "https://github.com/example/ci-contract-fixture/actions/runs/1001/job/2001",
+    "step_attribution": "job_log_only_not_independently_verified"
+  },
+  "errors": [],
+  "limits": {
+    "json_response_bytes": 524288,
+    "jobs_per_page": 100,
+    "max_pages": 5,
+    "max_jobs": 500,
+    "max_steps": 1000,
+    "log_bytes": 1048576,
+    "excerpt_characters": 65536,
+    "line_characters": 4096,
+    "response_bytes": 2097152,
+    "socket_timeout_seconds": 10,
+    "deadline_seconds": 60,
+    "http_requests": 12
+  },
+  "read_only": true,
+  "root_cause_proven": false,
+  "repair_verified": false
+}

@@ -1,0 +1,38 @@
+name: Bug / 故障报告
+description: 记录现象与影响；不需要预先定位文件或提供测试命令
+title: "[Bug] "
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: 请勿粘贴密钥、私有启动链接或完整敏感日志。创建 Issue 不会自动授权模型费用或代码修改。
+  - type: textarea
+    id: actual
+    attributes:
+      label: 发生了什么
+      description: 操作后看到什么问题？影响了什么？
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 操作步骤或输入样例（知道多少写多少）
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境与版本（可选）
+      description: 系统、分支/提交、浏览器或 doctor 输出；不要包含账号凭据。
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 报错或截图（可选，先脱敏）
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 如何判断问题解决（可选，可由维护者或 Agent 帮忙补齐）

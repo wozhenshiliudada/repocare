@@ -1,0 +1,28 @@
+name: Idea / 功能建议
+description: 先讨论目标和验收；无需设计实现
+title: "[Idea] "
+labels: [enhancement, needs-triage]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 目前有什么不方便
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 希望达到什么结果
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 你会怎样判断它好用（可选）
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 不希望改变什么、有哪些限制（可选）
+  - type: markdown
+    attributes:
+      value: 新想法先讨论，明确目标后由维护者添加 ready-for-agent；该标签不能授予执行、费用或发布权限。

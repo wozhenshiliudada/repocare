@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "status": "metadata_frozen_environment_pending",
+  "paid_authorized": false,
+  "seed": "repocare-w0-v1:",
+  "top_k": 5,
+  "sampling": "python=4,js=2,ts=2; one repo per language; stable SHA256 order; no agent outcomes",
+  "eligibility": {
+    "implementation_files_min": 2,
+    "changed_lines": [
+      15,
+      600
+    ],
+    "issue_characters": [
+      100,
+      16000
+    ],
+    "requires_fail_to_pass": true,
+    "requires_pass_to_pass": true
+  },
+  "exclusions": [
+    {
+      "instance_id": "sdv-dev__SDV-2570",
+      "repository": "sdv-dev/SDV",
+      "reason": "fixed-base BSL-1.1 not in first-batch permissive-license filter",
+      "license_sha256": "fcaa94d4732eb6af1a75ef2282e286786f3ca07e951b8e138b543fda19baf302"
+    }
+  ],
+  "source_pins": {
+    "python": {
+      "dataset": "SWE-bench-Live/SWE-bench-Live",
+      "revision": "b51a86422e10cfd403beb4773e5a2947953e36ec",
+      "path": "data/202506-00000-of-00001.parquet",
+      "sha256": "1202acd70b011211ab552087ecc69d3c85fccccbfabeb19895a7f20c72c6ca4f",
+      "bytes": 2214885
+    },
+    "js": {
+      "dataset": "SWE-bench-Live/MultiLang",
+      "revision": "3638632e8153a10ca422c1022bed79023084b5c9",
+      "path": "data/js-00000-of-00001.parquet",
+      "sha256": "bc6ec49ffaf9db97840d55eba6954fae8f5fb0fb071cf49e187f36ffadd55a7a",
+      "bytes": 45122982
+    },
+    "ts": {
+      "dataset": "SWE-bench-Live/MultiLang",
+      "revision": "3638632e8153a10ca422c1022bed79023084b5c9",
+      "path": "data/ts-00000-of-00001.parquet",
+      "sha256": "7e23783e27230c9cfab1035690035c25523043d6af635bc78da3fd2010c32714",
+      "bytes": 31013117
+    }
+  },
+  "live_code_revision": "62d02936a0726fbf4597b05bd07b09fb99eddae6",
+  "tasks": [
+    {
+      "family": "live",
+      "role": "development",
+      "language": "python",
+      "instance_id": "Pyomo__pyomo-3633",
+      "repository": "Pyomo/pyomo",
+      "base_commit": "dc503c2835ea2e41569b1a119caedb248ae2939d",
+      "source_revision": "b51a86422e10cfd403beb4773e5a2947953e36ec",
+      "dataset": "SWE-bench-Live/SWE-bench-Live",
+      "dataset_file": "data/202506-00000-of-00001.parquet",
+      "created_at": "2025-06-16 21:37:03",
+      "repository_license": "BSD-3-Clause",
+      "license_url": "https://raw.githubusercontent.com/Pyomo/pyomo/dc503c2835ea2e41569b1a119caedb248ae2939d/LICENSE.md",
+      "license_sha256": "615dd536ab9ba4274ff8752a30359b78ad8f24c3320e3729644c3c168e6566fc",
+      "public_prompt_sha256": "76f6828638c73865cab194977a3ca1ad5e7dba3c17352a5d4b08c575208c13c5",
+      "difficulty_metadata": {
+        "implementation_files": 4,
+        "changed_lines": 139
+      },
+      "docker_image": null,
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "live",
+      "role": "development",
+      "language": "python",
+      "instance_id": "slackapi__python-slack-sdk-1703",
+      "repository": "slackapi/python-slack-sdk",
+      "base_commit": "2f75504e9761ea3b7a5f934c542701c1247e8b7a",
+      "source_revision": "b51a86422e10cfd403beb4773e5a2947953e36ec",
+      "dataset": "SWE-bench-Live/SWE-bench-Live",
+      "dataset_file": "data/202506-00000-of-00001.parquet",
+      "created_at": "2025-06-17 19:20:41",
+      "repository_license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/slackapi/python-slack-sdk/2f75504e9761ea3b7a5f934c542701c1247e8b7a/LICENSE",
+      "license_sha256": "088e0b5b7549aa3b55345661d7036fe056ab472044bc8b17cff58864288d9522",
+      "public_prompt_sha256": "1c7eb2030a7f5c7ec6fb51e04afbc5b59315ad3c5ac75e0ff1c2ea8fbd5ab7c6",
+      "difficulty_metadata": {
+        "implementation_files": 3,
+        "changed_lines": 162
+      },
+      "docker_image": null,
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "live",
+      "role": "holdout",
+      "language": "python",
+      "instance_id": "sooperset__mcp-atlassian-531",
+      "repository": "sooperset/mcp-atlassian",
+      "base_commit": "bb0de9de5e73a4b689783aeff27b7c5f3349b229",
+      "source_revision": "b51a86422e10cfd403beb4773e5a2947953e36ec",
+      "dataset": "SWE-bench-Live/SWE-bench-Live",
+      "dataset_file": "data/202506-00000-of-00001.parquet",
+      "created_at": "2025-06-18 16:33:31",
+      "repository_license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/sooperset/mcp-atlassian/bb0de9de5e73a4b689783aeff27b7c5f3349b229/LICENSE",
+      "license_sha256": "e990a8422c25876d76b9dce9ee720ff2b662d5ca10a842afb0f787a0573276db",
+      "public_prompt_sha256": "adbb90cedcfb67b4d664e21649b577d9e3b6f1af460fbafbc56d28b3479f2568",
+      "difficulty_metadata": {
+        "implementation_files": 2,
+        "changed_lines": 143
+      },
+      "docker_image": null,
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "live",
+      "role": "holdout",
+      "language": "python",
+      "instance_id": "beeware__briefcase-2333",
+      "repository": "beeware/briefcase",
+      "base_commit": "5ae9b1d822af51bcbe7e25d217bb4307053a942e",
+      "source_revision": "b51a86422e10cfd403beb4773e5a2947953e36ec",
+      "dataset": "SWE-bench-Live/SWE-bench-Live",
+      "dataset_file": "data/202506-00000-of-00001.parquet",
+      "created_at": "2025-06-10 04:12:25",
+      "repository_license": "BSD-3-Clause",
+      "license_url": "https://raw.githubusercontent.com/beeware/briefcase/5ae9b1d822af51bcbe7e25d217bb4307053a942e/LICENSE",
+      "license_sha256": "594f4d9ce4760a5cf53ed0818668b216db072cc58daf2d308b13ed32897fdc08",
+      "public_prompt_sha256": "79cf81a6351afea619e2dda0799a341b231c8a29fdd70da3023c16659eec9846",
+      "difficulty_metadata": {
+        "implementation_files": 12,
+        "changed_lines": 533
+      },
+      "docker_image": null,
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "live",
+      "role": "development",
+      "language": "js",
+      "instance_id": "playcanvas__engine-9002",
+      "repository": "playcanvas/engine",
+      "base_commit": "adbfaaf202ccef538b74b21afc82f19c8d3c58d7",
+      "source_revision": "3638632e8153a10ca422c1022bed79023084b5c9",
+      "dataset": "SWE-bench-Live/MultiLang",
+      "dataset_file": "data/js-00000-of-00001.parquet",
+      "created_at": "2026-07-02T09:28:00Z",
+      "repository_license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/playcanvas/engine/adbfaaf202ccef538b74b21afc82f19c8d3c58d7/LICENSE",
+      "license_sha256": "42fa51ddd556be151a29f381fb97ee975825dcc454e805ea3ea9c079cca04d34",
+      "public_prompt_sha256": "0c1a8d75bbe2d4a3494de3485618d1eda00e69b4b7d84d783a4f7f9e0645ec6d",
+      "difficulty_metadata": {
+        "implementation_files": 2,
+        "changed_lines": 25
+      },
+      "docker_image": "starryzhang/sweb.eval.x86_64.playcanvas_1776_engine-9002",
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "live",
+      "role": "holdout",
+      "language": "js",
+      "instance_id": "aralroca__next-translate-1259",
+      "repository": "aralroca/next-translate",
+      "base_commit": "f1fbf473b42cf795ae8eb996003222625bfc58ac",
+      "source_revision": "3638632e8153a10ca422c1022bed79023084b5c9",
+      "dataset": "SWE-bench-Live/MultiLang",
+      "dataset_file": "data/js-00000-of-00001.parquet",
+      "created_at": "2026-03-22T06:21:20Z",
+      "repository_license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/aralroca/next-translate/f1fbf473b42cf795ae8eb996003222625bfc58ac/LICENSE",
+      "license_sha256": "bda61af6fd4aac2670d6c72fd66e9e2aa922131af944af96bf46a9b2118446b4",
+      "public_prompt_sha256": "4b9b567c0a3a92c1e75cb274061ca088eaf015883205f4ea356718fc0d4bc243",
+      "difficulty_metadata": {
+        "implementation_files": 2,
+        "changed_lines": 41
+      },
+      "docker_image": "starryzhang/sweb.eval.x86_64.aralroca_1776_next-translate-1259",
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "live",
+      "role": "development",
+      "language": "ts",
+      "instance_id": "ChainSafe__lodestar-8203",
+      "repository": "ChainSafe/lodestar",
+      "base_commit": "0c7dfe25ea36c42fd3dfcaf6e3658576320f0629",
+      "source_revision": "3638632e8153a10ca422c1022bed79023084b5c9",
+      "dataset": "SWE-bench-Live/MultiLang",
+      "dataset_file": "data/ts-00000-of-00001.parquet",
+      "created_at": "2025-08-14T06:47:52Z",
+      "repository_license": "Apache-2.0",
+      "license_url": "https://raw.githubusercontent.com/ChainSafe/lodestar/0c7dfe25ea36c42fd3dfcaf6e3658576320f0629/LICENSE",
+      "license_sha256": "4534e268bc50d35b1272461ba82979cac2cf90c0ac3cc8bf97b91fcba1b40747",
+      "public_prompt_sha256": "03fb3a275bcecca74a5dbc3ece6c862eac0c22f28a63c7c4f804d70b7654faab",
+      "difficulty_metadata": {
+        "implementation_files": 2,
+        "changed_lines": 100
+      },
+      "docker_image": "starryzhang/sweb.eval.x86_64.chainsafe_1776_lodestar-8203",
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "live",
+      "role": "holdout",
+      "language": "ts",
+      "instance_id": "recharts__recharts-6124",
+      "repository": "recharts/recharts",
+      "base_commit": "9d29b9bc6fd44cca77c920d7a085fb7d7ed6a9d0",
+      "source_revision": "3638632e8153a10ca422c1022bed79023084b5c9",
+      "dataset": "SWE-bench-Live/MultiLang",
+      "dataset_file": "data/ts-00000-of-00001.parquet",
+      "created_at": "2025-07-20T06:44:03Z",
+      "repository_license": "MIT",
+      "license_url": "https://raw.githubusercontent.com/recharts/recharts/9d29b9bc6fd44cca77c920d7a085fb7d7ed6a9d0/LICENSE",
+      "license_sha256": "2d3aa48a8d1d3b93093680e8e68d3a64cfb590c3ade377ffcaefc69dac7c2ce5",
+      "public_prompt_sha256": "bdc77faa8ad28afe0a66f72059fb5c716a898f5782d1e559760eb42a859c3227",
+      "difficulty_metadata": {
+        "implementation_files": 9,
+        "changed_lines": 124
+      },
+      "docker_image": "starryzhang/sweb.eval.x86_64.recharts_1776_recharts-6124",
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "image_and_base_sha",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "pro",
+      "role": "challenge",
+      "language": "python",
+      "instance_id": "instance_ansible__ansible-b748edea457a4576847a10275678127895d2f02f-v1055803c3a812189a1133297f7f5468579283f86",
+      "repository": "ansible/ansible",
+      "base_commit": null,
+      "base_commit_status": "must_read_actual_official_image",
+      "source_revision": "66f92766bba642462d4bbe5479e83f91f9211862",
+      "dataset": "scaleapi/SWE-bench_Pro-os/v2",
+      "dataset_file": "v2/tasks/instance_ansible__ansible-b748edea457a4576847a10275678127895d2f02f-v1055803c3a812189a1133297f7f5468579283f86",
+      "repository_license": "pending_fixed_image_checkout",
+      "public_prompt_sha256": "08cbaeae285cfb11da02351c4669878b4ec92f9a2b7b48964f7557d63b080a55",
+      "docker_image": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_ansible__ansible-b748edea457a4576847a10275678127895d2f02f-v1055803c3a812189a1133297f7f5468579283f86",
+      "official_resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240
+      },
+      "official_agent_timeout_seconds": 3000.0,
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "fixed_base_and_license",
+        "image_digest",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    },
+    {
+      "family": "pro",
+      "role": "challenge",
+      "language": "js",
+      "instance_id": "instance_NodeBB__NodeBB-8168c6c40707478f71b8af60300830fe554c778c-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "repository": "NodeBB/NodeBB",
+      "base_commit": null,
+      "base_commit_status": "must_read_actual_official_image",
+      "source_revision": "66f92766bba642462d4bbe5479e83f91f9211862",
+      "dataset": "scaleapi/SWE-bench_Pro-os/v2",
+      "dataset_file": "v2/tasks/instance_NodeBB__NodeBB-8168c6c40707478f71b8af60300830fe554c778c-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "repository_license": "pending_fixed_image_checkout",
+      "public_prompt_sha256": "9d52ebaedd257f2310b9faeeef300b279439644478276aa2f4ecf1e656cbd3bc",
+      "docker_image": "ghcr.io/scaleapi/swe-bench_pro-v2:instance_NodeBB__NodeBB-8168c6c40707478f71b8af60300830fe554c778c-vf2cf3cbd463b7ad942381f1c6d077626485a1e9e",
+      "official_resources": {
+        "cpus": 1,
+        "memory_mb": 4096,
+        "storage_mb": 10240
+      },
+      "official_agent_timeout_seconds": 3000.0,
+      "environment_verified": false,
+      "agent_rollouts": 0,
+      "image_digest": null,
+      "remaining_gates": [
+        "fixed_base_and_license",
+        "image_digest",
+        "resource_and_capacity",
+        "empty_patch_red",
+        "reference_patch_green",
+        "no_solution_exposure"
+      ]
+    }
+  ],
+  "protocol": {
+    "official_live_agent_fields": [
+      "problem_statement"
+    ],
+    "official_pro_agent_fields": [
+      "instruction"
+    ],
+    "hidden_grader_feedback_to_agent": false,
+    "product_trigger_or_input_changes_are_adapted_not_official_scores": true,
+    "old_ledgers_or_remaining_budgets_reused": false,
+    "pro_50min_is_upstream_not_a_change_to_our_30min_setting": true
+  },
+  "limitations": [
+    "Public tasks may already be present in model training data; no contamination-free claim.",
+    "Holdout means no RepoCare tuning on those tasks, not unseen by model pretraining.",
+    "Fixed June-2025 Python shard is a bounded selection pool, not a latest-task claim.",
+    "Multi-file reference edits are a selection proxy, not proof all those edits are required.",
+    "No official image or empty/reference test control has run in this W0 preparation.",
+    "Current repository/file-size/snapshot caps may block selected tasks; count capacity failures.",
+    "No baseline, model strength or production-autonomy result is inferred from metadata."
+  ]
+}

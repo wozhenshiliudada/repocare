@@ -1,0 +1,4198 @@
+[
+  {
+    "id": "A01",
+    "title": "选择本地 Git 仓库",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A02",
+    "title": "本地仓库预览",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A03",
+    "title": "GitHub 登录",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A04",
+    "title": "GitHub 仓库列表",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A05",
+    "title": "只读选择远端仓库",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A06",
+    "title": "明确连接远端本地副本",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A07",
+    "title": "同源已连接会话复用",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A08",
+    "title": "多仓库切换",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A09",
+    "title": "同一监听端口承载多个维护会话",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A10",
+    "title": "重启后显式重连原仓库",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A11",
+    "title": "保留用户未提交改动",
+    "page": "overview",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "连接预览与执行门自动核对未提交修改；不需要另造保护开关。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A12",
+    "title": "最近本地仓库页面",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "recent-projects",
+    "tab": "catalog",
+    "description": "列出当前状态目录的已有项目，经原检查入口展示原范围后显式重连；不重放旧审批或重置原账。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A13",
+    "title": "一次设置长期维护规则",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "A14",
+    "title": "更大仓库的分页与按需连接",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "large-repository",
+    "tab": "catalog",
+    "description": "代码浏览与原范围选择已分页，过滤/选择沿共享目录和单文件容量；仓库目录枚举仍有界整体读取。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B01",
+    "title": "React 三栏工作台",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B02",
+    "title": "浅蓝主题、深色/系统模式、字号与界面语言",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "设置→通用提供主题、字号和zh-CN/en语言草稿，点击保存后生效并在当前浏览器持久保留。主导航、设置、会话、教程和主要任务入口已切换；原始仓库/任务/模型输出保留原文，旧业务卡与原始详情尚未全部本地化。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B03",
+    "title": "窄屏抽屉",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B04",
+    "title": "原维护任务列表",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B05",
+    "title": "中央输入维护问题",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B06",
+    "title": "方案、诊断、风险和 Diff",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B07",
+    "title": "当前阶段与结果摘要",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "activity-stream",
+    "tab": "catalog",
+    "description": "选中原维护任务查看已有阶段/工具/usage回执；未提供字段保持未知，完整流式订阅尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开原任务活动与用量"
+      }
+    ]
+  },
+  {
+    "id": "B08",
+    "title": "预算与未知占用摘要",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B09",
+    "title": "刷新保持视图/任务",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B10",
+    "title": "已追踪文件树、筛选与行号查看",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B11",
+    "title": "Git 本地拓扑图",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B12",
+    "title": "明确补取远端历史",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B13",
+    "title": "Issues 基础列表",
+    "page": "issues",
+    "availability": "mixed",
+    "workflow": "issue-create",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；扩展交互使用本地预览，不执行。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B14",
+    "title": "PR 基础列表",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B15",
+    "title": "Actions 基础列表",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B16",
+    "title": "外观与高级设置入口",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "设置窗口已分为通用、模型、通知；右侧显示分类内容，模型添加/编辑再进入下一级。可在设置内展开助手而保留当前设置草稿；通用/通知须明确保存，维护权限仍由原控制器与独立确认管理。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B17",
+    "title": "人工批准/拒绝与已获准自主修复",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B18",
+    "title": "候选封装、复测、本地分支发布/拒绝/清理",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "选择原任务后，查看运行证据、本地分支审批、拒绝/清理及中断封装核验。Issue交付另在交付页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "审阅任务候选与本地交付"
+      },
+      {
+        "page": "delivery",
+        "tab": "catalog",
+        "label": "查看Issue交付与验收"
+      }
+    ]
+  },
+  {
+    "id": "B19",
+    "title": "历史认领、恢复与反馈清理",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "B20",
+    "title": "停止当前任务",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B21",
+    "title": "扩大请求额度",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B22",
+    "title": "来源记忆、结构查询",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "source-build",
+    "tab": "sources",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": [
+      "structure-build",
+      "source-compose"
+    ]
+  },
+  {
+    "id": "B23",
+    "title": "经历、知识方法与更正",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "knowledge",
+    "description": "记忆→知识方法，展开具体条目的修订新版本与来源更正；保留原版，新候选另审阅。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "knowledge",
+        "label": "修订知识与来源更正"
+      }
+    ]
+  },
+  {
+    "id": "B24",
+    "title": "上下文整理与核对",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "compaction",
+    "description": "记忆→上下文整理，按原任务预览/另批整理、查看历史或核对未知意图；不会重发摘要或清除未知消费。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "compaction",
+        "label": "查看原任务上下文整理"
+      }
+    ]
+  },
+  {
+    "id": "B25",
+    "title": "维护事实、人工待办与统一记忆查询",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→维护事实：按类型查看原事项、修复、检查、游标及完成动作；编辑待办优先级/状态/出处版本与未来参考设置。统一查询另在记忆页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "管理维护事实与人工待办"
+      },
+      {
+        "page": "memory",
+        "tab": "catalog",
+        "label": "查询统一记忆"
+      }
+    ]
+  },
+  {
+    "id": "B26",
+    "title": "提交/CI 监控配置、暂停与检查",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→读取仓库范围预览，沿原文件/检查配置分支、间隔与可用GitHub元数据；查看暂停/恢复/立即检查和原通知状态。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "查看监控配置与事件"
+      }
+    ]
+  },
+  {
+    "id": "B27",
+    "title": "只读 Python 项目分析",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→读取范围预览→只读分析Python语法与检查缺口，查看匹配该预览指纹的实际报告。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "只读分析当前项目"
+      }
+    ]
+  },
+  {
+    "id": "B28",
+    "title": "原生运行报告/工具事件/用量时间线",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "dynamic-investigation",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；扩展交互使用本地预览，不执行。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B29",
+    "title": "独立记忆/知识管理页",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B30",
+    "title": "统一维护待办/事件中心",
+    "page": "events",
+    "availability": "mixed",
+    "workflow": "unified-queue",
+    "tab": "catalog",
+    "description": "监控、原 Issue 状态与维护待办已有入口；全来源统一自动调度尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "打开实际事件与待办"
+      }
+    ]
+  },
+  {
+    "id": "B31",
+    "title": "工作台/独立服务安全停止面板",
+    "page": "service",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "服务页受控刷新实际runtime/漂移与活动条件，跟踪原停止job，拒绝后可核对重试；断连保持未知，独立服务沿原can_stop能力。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "B32",
+    "title": "来源、案例、关系、结构建库与绑定向导",
+    "page": "memory",
+    "availability": "mixed",
+    "workflow": "source-build",
+    "tab": "catalog",
+    "description": "资料建库、报告案例、关系与结构建图可通过原库工具执行；新会话可明确固定来源，既有任务不换绑、不重置原账。",
+    "baseline": "已接线",
+    "relatedWorkflows": [
+      "relations",
+      "source-compose",
+      "structure-build",
+      "source-bind"
+    ]
+  },
+  {
+    "id": "B33",
+    "title": "Provider/model 网页配置",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "provider",
+    "tab": "catalog",
+    "description": "设置→模型先列出不可变配置，显式添加或编辑另存，支持名称、URL、模型、Key及上下文/输出长度。旧Key不回显，完整配置相同则复用原ID；新任务可选择模型，旧任务/审批/监控不换绑。保存不调用模型，服务页另有原会话单次探测。",
+    "baseline": "仅说明",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "service",
+        "tab": "catalog",
+        "label": "本地检查与单次探测；配置见设置→模型"
+      }
+    ]
+  },
+  {
+    "id": "B34",
+    "title": "服务健康/版本管理页",
+    "page": "service",
+    "availability": "mixed",
+    "workflow": "service-upgrade",
+    "tab": "catalog",
+    "description": "服务页已有版本、活动、就绪条件和原安全停止；本候选还提供setup及gateway run/status/open/stop/restart前台命令。restart须确认原进程退出和锁释放，busy/unknown不重放；网页自动升级、系统常驻安装和热更新仍未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "service",
+        "tab": "catalog",
+        "label": "打开实际服务控制"
+      }
+    ]
+  },
+  {
+    "id": "B35",
+    "title": "自由聊天与完整流式消息产品",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "conversation",
+    "tab": "catalog",
+    "description": "左栏“新会话”已接无仓库普通聊天、明确模型选择、持久多轮历史/Native及独立助手账；助手可读同一教程并提出表单草稿。回复按原作业轮询取得，完整token流式显示尚未实现。conversation表单仍是未实现扩展的设计预览，不替代左栏真实会话入口。",
+    "baseline": "无交互",
+    "relatedWorkflows": [],
+    "nativeLinks": []
+  },
+  {
+    "id": "B36",
+    "title": "在线编辑、交互终端、任意 Git 操作",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "editor",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": [
+      "git-operations",
+      "shell"
+    ]
+  },
+  {
+    "id": "C01",
+    "title": "用户手工问题发起维护",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C02",
+    "title": "指定分支新提交观察",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→读取仓库范围预览，沿原文件/检查配置分支、间隔与可用GitHub元数据；查看暂停/恢复/立即检查和原通知状态。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "查看监控配置与事件"
+      }
+    ]
+  },
+  {
+    "id": "C03",
+    "title": "按完整 SHA 去重",
+    "page": "events",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原监控自动去重、检查/诊断与共享预算；无须每项独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C04",
+    "title": "GitHub 失败 run/attempt 元数据",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "ci-investigation",
+    "tab": "catalog",
+    "description": "已接原CI精确Run/Attempt/Job只读证据；分析/可比结论按实际来源、可信回执与覆盖范围展示。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C05",
+    "title": "运行已有获准本地检查",
+    "page": "events",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原监控自动去重、检查/诊断与共享预算；无须每项独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C06",
+    "title": "新失败证据唤醒诊断",
+    "page": "events",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原监控自动去重、检查/诊断与共享预算；无须每项独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C07",
+    "title": "监控暂停、恢复、立即检查、事件查看",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→读取仓库范围预览，沿原文件/检查配置分支、间隔与可用GitHub元数据；查看暂停/恢复/立即检查和原通知状态。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "查看监控配置与事件"
+      }
+    ]
+  },
+  {
+    "id": "C08",
+    "title": "原监控通知与状态",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "保留原监控配置、事件、暂停/恢复/检查与待办入口；统一设置另支持审批、结果、失败和服务变化的站内提醒、已授权桌面、可选声音、免打扰与去重。首次载入不弹历史，权限只由用户在设置中明确申请；本机浏览器提醒不是邮件、手机或常驻跨设备推送。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "查看监控配置与事件"
+      }
+    ]
+  },
+  {
+    "id": "C09",
+    "title": "监控事件与原预算共享",
+    "page": "events",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原监控自动去重、检查/诊断与共享预算；无须每项独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C10",
+    "title": "可信 Issue 标题/正文/标签/状态读取",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C11",
+    "title": "排除 PR、验证可信准入标签操作者",
+    "page": "issues",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "读取/调查时控制器核PR排除、可信标签、版本与去重；网页显示准入状态。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C12",
+    "title": "Issue 版本、目标 SHA 与调查去重",
+    "page": "issues",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "读取/调查时控制器核PR排除、可信标签、版本与去重；网页显示准入状态。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C13",
+    "title": "仅 bug 的只读分诊",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C14",
+    "title": "Issue→原任务/候选/交付关联",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C15",
+    "title": "监控默认进入自主候选",
+    "page": "events",
+    "availability": "mixed",
+    "workflow": "auto-intake",
+    "tab": "catalog",
+    "description": "按原维护规则预览并确认有期接单，保留原额度；没有默认赋予自主修复或无限期权限。",
+    "baseline": "仅说明",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "issues",
+        "tab": "catalog",
+        "label": "打开实际 Issue 接单控制"
+      }
+    ]
+  },
+  {
+    "id": "C16",
+    "title": "提交/CI/Issue 统一持久任务队列",
+    "page": "events",
+    "availability": "mixed",
+    "workflow": "unified-queue",
+    "tab": "catalog",
+    "description": "监控、原 Issue 状态与维护待办已有入口；全来源统一自动调度尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "打开实际事件与待办"
+      }
+    ]
+  },
+  {
+    "id": "C17",
+    "title": "撤标签、改Issue、新提交的自动停止与替换",
+    "page": "issues",
+    "availability": "mixed",
+    "workflow": "version-replacement",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；扩展交互使用本地预览，不执行。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C18",
+    "title": "新问题/想法建Issue、评论、进度回写与标签管理",
+    "page": "issues",
+    "availability": "mixed",
+    "workflow": "issue-create",
+    "tab": "catalog",
+    "description": "原调查和执行的阶段进度评论已接；自由评论、新建Issue与标签管理仍无专用执行接口。",
+    "baseline": "无交互",
+    "relatedWorkflows": [
+      "issue-comment",
+      "issue-labels"
+    ]
+  },
+  {
+    "id": "C19",
+    "title": "公网Webhook/GitHub App/云常驻",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "webhook",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "C20",
+    "title": "邮件/手机/跨设备通知",
+    "page": "events",
+    "availability": "preview",
+    "workflow": "notifications",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D01",
+    "title": "固定提交、单提交/两版本/分支比较",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "git-compare",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D02",
+    "title": "有界 log/show/diff 证据",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "git-compare",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D03",
+    "title": "重命名、删除、多父提交等差异说明",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "git-compare",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D04",
+    "title": "失败异常/断言/路径/测试名提取",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D05",
+    "title": "日志片段位置、SHA、截断标记",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D06",
+    "title": "从固定Git对象读取源码",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D07",
+    "title": "按已准许目录枚举",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D08",
+    "title": "关键词/标识符与代码位置搜索",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D09",
+    "title": "固定提交原生Git文本检索",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D10",
+    "title": "变更文件、日志文件优先排序",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D11",
+    "title": "一跳Python/相对JS、TS导入线索",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D12",
+    "title": "日志文件/行号与真实源码核验",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D13",
+    "title": "文件候选、检查候选和来源回执",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页展开原可信快照及调查报告，查看操作者/标签、固定SHA、路径行号、候选理由和partial范围；刷新仅恢复原jobs证据。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D14",
+    "title": "将调查编译为原具体Policy",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D15",
+    "title": "自动寻找可比的最后成功检查",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "last-success",
+    "tab": "catalog",
+    "description": "沿原 CI 证据接口核对准确版本；没有核准的命令/环境/依赖回执时保持无法确认，不把旧绿当可比。",
+    "baseline": "无交互",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开实际 CI 证据与基线"
+      }
+    ]
+  },
+  {
+    "id": "D16",
+    "title": "精确CI日志/步骤/attempt下载与分析",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "ci-investigation",
+    "tab": "catalog",
+    "description": "已接原CI精确Run/Attempt/Job只读证据；分析/可比结论按实际来源、可信回执与覆盖范围展示。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D17",
+    "title": "任务内动态追加搜索/历史工具",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "dynamic-investigation",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D18",
+    "title": "Git blame辅助",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "blame",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D19",
+    "title": "自动bisect",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "bisect",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "D20",
+    "title": "自动根因证明/全仓语义理解",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "root-evidence",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E01",
+    "title": "静态发现已有测试与配置",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E02",
+    "title": "首次连接时推荐维护范围/检查",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E03",
+    "title": "按本次调查选有限检查集",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E04",
+    "title": "只读源码/受保护测试分离",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E05",
+    "title": "规划前仅运行获准基线",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "preflight",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E06",
+    "title": "基线与候选检查对比",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原检查表区分超时、截断、环境阻塞、零/全跳过、未知计数；同命令退出码逐项对照，页面展示不改变原裁决。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看任务检查与对照"
+      },
+      {
+        "page": "issues",
+        "tab": "catalog",
+        "label": "查看Issue原运行结果"
+      }
+    ]
+  },
+  {
+    "id": "E07",
+    "title": "超时、退出码、stdout/stderr记录",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原检查表区分超时、截断、环境阻塞、零/全跳过、未知计数；同命令退出码逐项对照，页面展示不改变原裁决。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看任务检查与对照"
+      },
+      {
+        "page": "issues",
+        "tab": "catalog",
+        "label": "查看Issue原运行结果"
+      }
+    ]
+  },
+  {
+    "id": "E08",
+    "title": "零测试/全跳过/无可靠计数识别",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原检查表区分超时、截断、环境阻塞、零/全跳过、未知计数；同命令退出码逐项对照，页面展示不改变原裁决。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看任务检查与对照"
+      },
+      {
+        "page": "issues",
+        "tab": "catalog",
+        "label": "查看Issue原运行结果"
+      }
+    ]
+  },
+  {
+    "id": "E09",
+    "title": "环境阻塞与代码失败分开",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原检查表区分超时、截断、环境阻塞、零/全跳过、未知计数；同命令退出码逐项对照，页面展示不改变原裁决。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看任务检查与对照"
+      },
+      {
+        "page": "issues",
+        "tab": "catalog",
+        "label": "查看Issue原运行结果"
+      }
+    ]
+  },
+  {
+    "id": "E10",
+    "title": "Python环境识别与独立venv",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页预览实际环境计划/许可、依赖来源、固定范围与来源指纹；原记录缺失或阻塞明确显示，不为查看自动重新准备。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E11",
+    "title": "Node锁文件与受控npm安装",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页预览实际环境计划/许可、依赖来源、固定范围与来源指纹；原记录缺失或阻塞明确显示，不为查看自动重新准备。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E12",
+    "title": "明确批准安装/联网",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E13",
+    "title": "离线wheel/tgz来源与安装回执",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页预览实际环境计划/许可、依赖来源、固定范围与来源指纹；原记录缺失或阻塞明确显示，不为查看自动重新准备。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E14",
+    "title": "运行时/输入/实际依赖指纹",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页预览实际环境计划/许可、依赖来源、固定范围与来源指纹；原记录缺失或阻塞明确显示，不为查看自动重新准备。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E15",
+    "title": "修改前后同环境检查",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页预览实际环境计划/许可、依赖来源、固定范围与来源指纹；原记录缺失或阻塞明确显示，不为查看自动重新准备。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E16",
+    "title": "封装提交的匹配环境复测",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E17",
+    "title": "回归保持和独立行为验收",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E18",
+    "title": "可选Python调用绑定静态检查",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "python-binding",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。建库/登记可操作，既有任务换绑或启用仍遵守原固定协议。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E19",
+    "title": "目标环境网页向导",
+    "page": "issues",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "Issue页预览实际环境计划/许可、依赖来源、固定范围与来源指纹；原记录缺失或阻塞明确显示，不为查看自动重新准备。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "E20",
+    "title": "无测试仓库的验收方案",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "validation-design",
+    "tab": "catalog",
+    "description": "Issue 与提交/CI 事件已有固定行为案例提议、审阅、原环境红基线、新审批与候选/封装验证；当前已验 Python 路径。下方草稿不执行任务，不代表任意需求或全部语言已支持。",
+    "baseline": "部分接线",
+    "relatedWorkflows": [
+      "preflight"
+    ],
+    "nativeLinks": [
+      {
+        "page": "issues",
+        "tab": "catalog",
+        "label": "从原 Issue 设计并审阅案例"
+      },
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "从原监控事件设计并审阅案例"
+      },
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原候选与验证结果"
+      }
+    ]
+  },
+  {
+    "id": "E21",
+    "title": "新增功能的受控验收",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "validation-design",
+    "tab": "catalog",
+    "description": "Issue 与提交/CI 事件已有固定行为案例提议、审阅、原环境红基线、新审批与候选/封装验证；当前已验 Python 路径。下方草稿不执行任务，不代表任意需求或全部语言已支持。",
+    "baseline": "部分接线",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "issues",
+        "tab": "catalog",
+        "label": "从原 Issue 设计并审阅案例"
+      },
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "从原监控事件设计并审阅案例"
+      },
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原候选与验证结果"
+      }
+    ]
+  },
+  {
+    "id": "E22",
+    "title": "陌生仓库的OS/容器执行隔离",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "sandbox",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "仅说明",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F01",
+    "title": "真实Pi AgentSession",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F02",
+    "title": "显式模型配置",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "provider",
+    "tab": "catalog",
+    "description": "兼容OpenAI Chat Completions的模型配置可本机保存并加入不可变目录；每配置可声明上下文和单次输出，新任务显式选择/回切原会话及余额。保存只检查格式、不探测供应商容量；实际单次探测仍需原预览/确认。没有运行中热切、自动路由或fallback，旧批准与账不迁移。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "service",
+        "tab": "catalog",
+        "label": "本地条件检查与原会话单次响应"
+      }
+    ]
+  },
+  {
+    "id": "F03",
+    "title": "DeepSeek/MiMo接入",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "provider",
+    "tab": "catalog",
+    "description": "API Key、URL、Model 可在本机保存，保存只检查格式；服务页可检查本地准备情况，并经单独预览和明确确认，使用当前仓库原会话与原额度发送一次模型请求。旧任务不自动换绑。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "service",
+        "tab": "catalog",
+        "label": "打开实际模型设置"
+      }
+    ]
+  },
+  {
+    "id": "F04",
+    "title": "OpenAI兼容接口适配",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "provider",
+    "tab": "catalog",
+    "description": "API Key、URL、Model 可在本机保存，保存只检查格式；服务页可检查本地准备情况，并经单独预览和明确确认，使用当前仓库原会话与原额度发送一次模型请求。旧任务不自动换绑。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "service",
+        "tab": "catalog",
+        "label": "打开实际模型设置"
+      }
+    ]
+  },
+  {
+    "id": "F05",
+    "title": "只读 `read_source`",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F06",
+    "title": "`propose_repair` 局部编辑",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F07",
+    "title": "Node重建、Python独立核验补丁",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F08",
+    "title": "单规划会话多轮工具调用",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F09",
+    "title": "工具输入错误返回与纠正",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F10",
+    "title": "测试失败后的有界修订",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F11",
+    "title": "最近方案、读取与断言聚焦",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F12",
+    "title": "重复读取提示与提案检查点",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F13",
+    "title": "同文件提案归并",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F14",
+    "title": "格式错误、输出截断、超时处理",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原规划、审批、修订/恢复入口驱动；内部工具/校验不要求另加操作按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F15",
+    "title": "规划事件与token回执采集",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "activity-stream",
+    "tab": "catalog",
+    "description": "选中原维护任务查看已有阶段/工具/usage回执；未提供字段保持未知，完整流式订阅尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开原任务活动与用量"
+      }
+    ]
+  },
+  {
+    "id": "F16",
+    "title": "Mock/本机合成SSE回放",
+    "page": "tasks",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有合成预览脚本/测试，不属于普通用户必须点击的生产能力。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F17",
+    "title": "显式知识反思会话",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F18",
+    "title": "运行中热切换模型",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "model-switch",
+    "tab": "catalog",
+    "description": "新维护任务已可显式选择已保存模型，准备或重开对应的持久原会话；这不等于运行中热切换。本项的活动任务中途换模型、迁移旧上下文/批准、自动fallback仍未实现，旧任务继续原模型与原账。",
+    "baseline": "仅说明",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "F19",
+    "title": "多Provider智能路由/自动fallback",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "model-routing",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": [
+      "provider"
+    ]
+  },
+  {
+    "id": "F20",
+    "title": "开放通用Shell/任意文件工具",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "shell",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G01",
+    "title": "可改/只读/禁读路径分开",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G02",
+    "title": "精确测试argv白名单",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G03",
+    "title": "批准前不修改、拒绝不修改",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G04",
+    "title": "批准绑定具体方案内容",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G05",
+    "title": "已授权范围内自主候选",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G06",
+    "title": "修改审批与发布审批分开",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G07",
+    "title": "长期规则→本轮固定范围",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G08",
+    "title": "预授权内自动选择具体文件",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G09",
+    "title": "越界、来源漂移、旧批准失效",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "执行前后原漂移/授权门，网页呈现拒绝/错误；无需另加安全开关。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G10",
+    "title": "扩权预览与新版本续接",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "scope-evolution",
+    "tab": "catalog",
+    "description": "原目录规则与新任务使用现有确认流程；旧任务固定范围、批准与原账不自动迁移。",
+    "baseline": "无交互",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "configuration",
+        "tab": "catalog",
+        "label": "打开实际维护规则"
+      }
+    ]
+  },
+  {
+    "id": "G11",
+    "title": "Host/Origin/能力令牌/CSP边界",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原Host/Origin/token/CSP、秘密分离、资料只作数据和自有清理门；不适合增加绕过按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G12",
+    "title": "凭据与模型/子进程分离",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原Host/Origin/token/CSP、秘密分离、资料只作数据和自有清理门；不适合增加绕过按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G13",
+    "title": "资料/Issue/日志只作数据",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原Host/Origin/token/CSP、秘密分离、资料只作数据和自有清理门；不适合增加绕过按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G14",
+    "title": "防误删与自有清理边界",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原Host/Origin/token/CSP、秘密分离、资料只作数据和自有清理门；不适合增加绕过按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G15",
+    "title": "真实OS安全沙箱/网络隔离",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "sandbox",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "仅说明",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "G16",
+    "title": "维护者角色/准入名单管理",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "roles",
+    "tab": "catalog",
+    "description": "首次 Issue 规则可设置可信标签操作者；角色权限平台和旧规则名单热变更未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "configuration",
+        "tab": "catalog",
+        "label": "打开实际 Issue 准入设置"
+      }
+    ]
+  },
+  {
+    "id": "H01",
+    "title": "Git身份、HEAD、工作区快照",
+    "page": "delivery",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原候选/远端发布控制器自动执行保护，具体动作入口存在；不是各有独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H02",
+    "title": "独立候选worktree/专用分支",
+    "page": "delivery",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原候选/远端发布控制器自动执行保护，具体动作入口存在；不是各有独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H03",
+    "title": "候选Diff与实际测试报告",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H04",
+    "title": "失败舍弃/回退自有候选",
+    "page": "delivery",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原候选/远端发布控制器自动执行保护，具体动作入口存在；不是各有独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H05",
+    "title": "自有候选清理",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "选择原任务后，查看运行证据、本地分支审批、拒绝/清理及中断封装核验。Issue交付另在交付页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "审阅任务候选与本地交付"
+      },
+      {
+        "page": "delivery",
+        "tab": "catalog",
+        "label": "查看Issue交付与验收"
+      }
+    ]
+  },
+  {
+    "id": "H06",
+    "title": "封装候选为固定commit",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H07",
+    "title": "detached验证工作区复测",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H08",
+    "title": "单独审批创建本地integration分支",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H09",
+    "title": "本地发布/拒绝/恢复证据",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "选择原任务后，查看运行证据、本地分支审批、拒绝/清理及中断封装核验。Issue交付另在交付页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "审阅任务候选与本地交付"
+      },
+      {
+        "page": "delivery",
+        "tab": "catalog",
+        "label": "查看Issue交付与验收"
+      }
+    ]
+  },
+  {
+    "id": "H10",
+    "title": "精确新远端分支发布",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H11",
+    "title": "干净bare carrier传输",
+    "page": "delivery",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原候选/远端发布控制器自动执行保护，具体动作入口存在；不是各有独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H12",
+    "title": "create-only远端ref保护",
+    "page": "delivery",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原候选/远端发布控制器自动执行保护，具体动作入口存在；不是各有独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H13",
+    "title": "先落push意图、最多一次尝试",
+    "page": "delivery",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "由原候选/远端发布控制器自动执行保护，具体动作入口存在；不是各有独立按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H14",
+    "title": "固定Draft PR载荷与新审批",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H15",
+    "title": "PR创建未知结果恢复",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H16",
+    "title": "实际合并与默认分支验收",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H17",
+    "title": "指定Actions最新attempt/job验收",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H18",
+    "title": "独立批准关闭原Issue",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H19",
+    "title": "关闭后复核与原执行delivered关联",
+    "page": "delivery",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "后端写后复核更新原execution/closure，页面分别展示状态，非点击即认定delivered。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H20",
+    "title": "未知关闭结果只读核对",
+    "page": "delivery",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H21",
+    "title": "自动合并main/发布上线",
+    "page": "delivery",
+    "availability": "preview",
+    "workflow": "merge",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "H22",
+    "title": "冲突自动解决与多worktree协同集成",
+    "page": "delivery",
+    "availability": "preview",
+    "workflow": "conflicts",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I01",
+    "title": "原SQLite任务/方案/操作登记",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原持久登记/幂等/Native身份由已接动作驱动，无须另建保存按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I02",
+    "title": "request_id幂等与内容核验",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原持久登记/幂等/Native身份由已接动作驱动，无须另建保存按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I03",
+    "title": "方案单次消费与原run关联",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原持久登记/幂等/Native身份由已接动作驱动，无须另建保存按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I04",
+    "title": "原生Pi任务与Native JSONL持久化",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原持久登记/幂等/Native身份由已接动作驱动，无须另建保存按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I05",
+    "title": "重开原任务继续规划",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "I06",
+    "title": "失败反馈保存与装载",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "I07",
+    "title": "原生格式/Schema安全恢复",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "I08",
+    "title": "停止当前模型/任务",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I09",
+    "title": "Issue执行协作暂停与新审批续接",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I10",
+    "title": "活owner/child与PID创建时间核验",
+    "page": "tasks",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "接管前原进程/PID创建时间核验；页面按钮不绕过活owner门。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I11",
+    "title": "原进程退出后的接管",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I12",
+    "title": "修复中断检查与安全恢复",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "I13",
+    "title": "封装/发布中断恢复",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "I14",
+    "title": "失败反馈清理恢复",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "I15",
+    "title": "旧运行导入与只读核验",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "archive-import",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I16",
+    "title": "UI历史备份与验证",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "backup",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I17",
+    "title": "服务重启/闲置升级",
+    "page": "service",
+    "availability": "mixed",
+    "workflow": "service-upgrade",
+    "tab": "catalog",
+    "description": "原服务页保留活动/漂移/安全停止控制；gateway restart已能经原停止入口确认退出与锁释放后，按同一保存配置前台重开。busy、未知身份或停止未核实时拒绝重启，不强杀/清账；自动安装升级、常驻服务和网页热升级仍未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "service",
+        "tab": "catalog",
+        "label": "打开实际服务控制"
+      }
+    ]
+  },
+  {
+    "id": "I18",
+    "title": "新提交/任务内容变化后版本替换",
+    "page": "issues",
+    "availability": "preview",
+    "workflow": "version-replacement",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "仅说明",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "I19",
+    "title": "任意断电/强杀/环境丢失无损恢复",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "crash-recovery",
+    "tab": "catalog",
+    "description": "选中原任务使用已实现的认领、核验、中止与接续；无法核验的现场保持，不自动重放历史。",
+    "baseline": "无交互",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开原任务与恢复证据"
+      }
+    ]
+  },
+  {
+    "id": "I20",
+    "title": "多用户/多Agent并发写同一任务",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "worktree-collaboration",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J01",
+    "title": "调用前持久意图与额度保留",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原意图/预算/时间/token边界和关联自动执行；额度不是每次模型调用的单独按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J02",
+    "title": "已用/未知占用/剩余分开",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J03",
+    "title": "新会话默认/最大500次请求（当前配置）",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "当前共享配置max_requests=500，CLI默认及合法上界沿同一值。已有任务、监控和助手账继续固定的原总额、used/unknown/remaining，不因新默认值或新会话入口重置旧额度。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J04",
+    "title": "每模型上下文、单次输出与思考参数",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "每个不可变模型配置可声明上下文、单次输出、可增删思考档位及API映射。显式输出为正安全整数且小于上下文，不设128000通用硬上限；旧配置保留原默认。目录查询、声明和真实生成分别验收，服务商容量及独立字节/超时保护仍适用。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J05",
+    "title": "每次规划会话60分钟（当前配置）",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "当前共享planning_timeout_seconds=3600，父进程另保留15秒收尾宽限；沿原有界进程与请求账执行。本轮没有更改该时限，也不把单次输出或请求次数当总费用上限。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J06",
+    "title": "多轮规划、修订、反思、摘要计费关联",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原意图/预算/时间/token边界和关联自动执行；额度不是每次模型调用的单独按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J07",
+    "title": "明确扩大请求上限",
+    "page": "configuration",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J08",
+    "title": "真实usage/缓存/token/耗时记录",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "activity-stream",
+    "tab": "catalog",
+    "description": "选中原维护任务查看已有阶段/工具/usage回执；未提供字段保持未知，完整流式订阅尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开原任务活动与用量"
+      }
+    ]
+  },
+  {
+    "id": "J09",
+    "title": "任务/监控/批次预算约束",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原意图/预算/时间/token边界和关联自动执行；额度不是每次模型调用的单独按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J10",
+    "title": "历史失败账本与剩余额度保留",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原意图/预算/时间/token边界和关联自动执行；额度不是每次模型调用的单独按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J11",
+    "title": "API读取、工具输出、文件字节上限",
+    "page": "configuration",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "原意图/预算/时间/token边界和关联自动执行；额度不是每次模型调用的单独按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "J12",
+    "title": "金额预算、每日费用与自动结算",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "costs",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K01",
+    "title": "保存原始问题、方案与工具历史",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "K02",
+    "title": "任务/repo/scope/Provider身份绑定",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "K03",
+    "title": "重启后读取安全检查点",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "K04",
+    "title": "真实失败反馈进入下一规划",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "K05",
+    "title": "任务恢复卡、阻止原因和原账",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务，查看原问题/方案/运行历史、身份及恢复卡。只提供原卡允许的续接/反馈恢复动作；原Native保持，未提供原文不补造。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看原任务历史与恢复"
+      }
+    ]
+  },
+  {
+    "id": "K06",
+    "title": "原生摘要/上下文整理",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "compaction",
+    "description": "记忆→上下文整理，按原任务预览/另批整理、查看历史或核对未知意图；不会重发摘要或清除未知消费。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "compaction",
+        "label": "查看原任务上下文整理"
+      }
+    ]
+  },
+  {
+    "id": "K07",
+    "title": "摘要追加、近期完整消息保留",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "compaction",
+    "description": "记忆→上下文整理，按原任务预览/另批整理、查看历史或核对未知意图；不会重发摘要或清除未知消费。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "compaction",
+        "label": "查看原任务上下文整理"
+      }
+    ]
+  },
+  {
+    "id": "K08",
+    "title": "摘要使用原额度/未知恢复",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "compaction",
+    "description": "记忆→上下文整理，按原任务预览/另批整理、查看历史或核对未知意图；不会重发摘要或清除未知消费。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "compaction",
+        "label": "查看原任务上下文整理"
+      }
+    ]
+  },
+  {
+    "id": "K09",
+    "title": "真实长任务摘要质量验证",
+    "page": "memory",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "长任务摘要质量属于评测，不能以整理按钮存在算验证完成。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K10",
+    "title": "显式登记Markdown资料",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "source-build",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K11",
+    "title": "确认/提议/待定/已替代分类",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K12",
+    "title": "原字节SHA、摘录与路径出处",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K13",
+    "title": "SQLite FTS5来源索引",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K14",
+    "title": "运行报告导出案例",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "case-export",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K15",
+    "title": "多来源案例/文档组合",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "source-compose",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K16",
+    "title": "决策替代关系登记/查询",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "relations",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K17",
+    "title": "来源变动与失效门",
+    "page": "memory",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "来源/分类/混合状态及漂移门自动核验，旧任务不会被查询静默换绑。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K18",
+    "title": "注入前来源、分类、混合状态核验",
+    "page": "memory",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "来源/分类/混合状态及漂移门自动核验，旧任务不会被查询静默换绑。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K19",
+    "title": "CodeGraph固定范围建索引",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "structure-build",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K20",
+    "title": "Python/JS/TS符号与关系查询",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "sources",
+    "description": "记忆→来源与结构，核对原绑定后查询符号/路径和指纹；固定上下文进入Pi沿原绑定，查询不授予执行权。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "sources",
+        "label": "查询来源与结构出处"
+      }
+    ]
+  },
+  {
+    "id": "K21",
+    "title": "源码/graph/清单指纹绑定",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "sources",
+    "description": "记忆→来源与结构，核对原绑定后查询符号/路径和指纹；固定上下文进入Pi沿原绑定，查询不授予执行权。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "sources",
+        "label": "查询来源与结构出处"
+      }
+    ]
+  },
+  {
+    "id": "K22",
+    "title": "只读结构上下文进入Pi",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "sources",
+    "description": "记忆→来源与结构，核对原绑定后查询符号/路径和指纹；固定上下文进入Pi沿原绑定，查询不授予执行权。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "sources",
+        "label": "查询来源与结构出处"
+      }
+    ]
+  },
+  {
+    "id": "K23",
+    "title": "结构查询原控件",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "sources",
+    "description": "记忆→来源与结构，核对原绑定后查询符号/路径和指纹；固定上下文进入Pi沿原绑定，查询不授予执行权。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "sources",
+        "label": "查询来源与结构出处"
+      }
+    ]
+  },
+  {
+    "id": "K24",
+    "title": "普通workbench建图/绑定向导",
+    "page": "memory",
+    "availability": "mixed",
+    "workflow": "structure-build",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。建库/登记可操作，既有任务换绑或启用仍遵守原固定协议。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K25",
+    "title": "从安全结束的运行捕获经历",
+    "page": "memory",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "experience",
+    "description": "安全结束自动捕获经历；旧运行可在原详情显式登记，不另造自动捕获按钮。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K26",
+    "title": "经历接受/拒绝/撤销",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "experience",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K27",
+    "title": "新任务检索已接受经历",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "experience",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K28",
+    "title": "当前源码变化后的历史适用性",
+    "page": "memory",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "experience",
+    "description": "原适用性/来源漂移核验和reason显示；接受参考不保证当前适用。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K29",
+    "title": "Pi显式反思提炼知识/方法",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "knowledge",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K30",
+    "title": "知识/方法独立审阅",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "knowledge",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K31",
+    "title": "条件、前提、步骤、验证与停止条件",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "knowledge",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K32",
+    "title": "人工修订新版本、显式替代",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "knowledge",
+    "description": "记忆→知识方法，展开具体条目的修订新版本与来源更正；保留原版，新候选另审阅。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "knowledge",
+        "label": "修订知识与来源更正"
+      }
+    ]
+  },
+  {
+    "id": "K33",
+    "title": "证据变化后的模型更正版本",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "knowledge",
+    "description": "记忆→知识方法，展开具体条目的修订新版本与来源更正；保留原版，新候选另审阅。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "memory",
+        "tab": "knowledge",
+        "label": "修订知识与来源更正"
+      }
+    ]
+  },
+  {
+    "id": "K34",
+    "title": "知识/经历撤销后阻断依赖",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "统一查询显示原excluded原因与同主题版本分组；审阅/分类/新鲜度分开保留，不能把命中视为实际装载。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K35",
+    "title": "明确主题冲突/版本碰撞处理",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "统一查询显示原excluded原因与同主题版本分组；审阅/分类/新鲜度分开保留，不能把命中视为实际装载。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K36",
+    "title": "方法转为可执行Skill",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "skills",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K37",
+    "title": "原方案/运行/检查点维护状态投影",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→维护事实：按类型查看原事项、修复、检查、游标及完成动作；编辑待办优先级/状态/出处版本与未来参考设置。统一查询另在记忆页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "管理维护事实与人工待办"
+      }
+    ]
+  },
+  {
+    "id": "K38",
+    "title": "维护事项/修复/检查/游标/完成动作",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→维护事实：按类型查看原事项、修复、检查、游标及完成动作；编辑待办优先级/状态/出处版本与未来参考设置。统一查询另在记忆页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "管理维护事实与人工待办"
+      }
+    ]
+  },
+  {
+    "id": "K39",
+    "title": "人工待办、优先级、延期、关闭",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→维护事实：按类型查看原事项、修复、检查、游标及完成动作；编辑待办优先级/状态/出处版本与未来参考设置。统一查询另在记忆页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "管理维护事实与人工待办"
+      }
+    ]
+  },
+  {
+    "id": "K40",
+    "title": "维护声明版本与出处链",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→维护事实：按类型查看原事项、修复、检查、游标及完成动作；编辑待办优先级/状态/出处版本与未来参考设置。统一查询另在记忆页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "管理维护事实与人工待办"
+      }
+    ]
+  },
+  {
+    "id": "K41",
+    "title": "未来新任务选择相关维护材料",
+    "page": "events",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "监控与待办→维护事实：按类型查看原事项、修复、检查、游标及完成动作；编辑待办优先级/状态/出处版本与未来参考设置。统一查询另在记忆页。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "管理维护事实与人工待办"
+      }
+    ]
+  },
+  {
+    "id": "K42",
+    "title": "全来源统一待办与自动排程",
+    "page": "events",
+    "availability": "mixed",
+    "workflow": "unified-queue",
+    "tab": "catalog",
+    "description": "监控、原 Issue 状态与维护待办已有入口；全来源统一自动调度尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "events",
+        "tab": "catalog",
+        "label": "打开实际事件与待办"
+      }
+    ]
+  },
+  {
+    "id": "K43",
+    "title": "BM25/标识符/中文双字词面检索",
+    "page": "memory",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "统一查询使用原词面检索，用户无需另选分词算法。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K44",
+    "title": "可选本地CPU语义encoder",
+    "page": "memory",
+    "availability": "mixed",
+    "workflow": "semantic-package",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。建库/登记可操作，既有任务换绑或启用仍遵守原固定协议。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K45",
+    "title": "可选混合排序/RRF",
+    "page": "memory",
+    "availability": "mixed",
+    "workflow": "semantic-package",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。建库/登记可操作，既有任务换绑或启用仍遵守原固定协议。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K46",
+    "title": "六类只读统一记忆视图",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K47",
+    "title": "统一查询不调用模型",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K48",
+    "title": "每次任务实际装载清单",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "先选择原任务→运行证据→本次实际传入的记忆清单；原记录未提供时明确未知，不用检索命中代替装载。",
+    "baseline": "原控件覆盖",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "查看实际记忆装载回执"
+      }
+    ]
+  },
+  {
+    "id": "K49",
+    "title": "bug_fix/commit_inspection装载路由",
+    "page": "memory",
+    "availability": "internal",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "手工修复/提交监控分别驱动既有两路由，不需要伪造七类任务选择器。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K50",
+    "title": "五种其他专用记忆路由",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "ci-investigation",
+    "tab": "catalog",
+    "description": "已接原CI精确Run/Attempt/Job只读证据；分析/可比结论按实际来源、可信回执与覆盖范围展示。",
+    "baseline": "无交互",
+    "relatedWorkflows": [
+      "code-review",
+      "dependency-analysis",
+      "documentation",
+      "health-report"
+    ]
+  },
+  {
+    "id": "K51",
+    "title": "时序、历史版本与来源状态核对",
+    "page": "memory",
+    "availability": "mixed",
+    "workflow": "memory-history",
+    "tab": "catalog",
+    "description": "现有条目显示原版本、出处、分类与新鲜度；独立时序/历史对照的执行后端尚未提供，可填写本地预览。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K52",
+    "title": "不同来源相似文字的语义去重",
+    "page": "memory",
+    "availability": "preview",
+    "workflow": "semantic-dedup",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K53",
+    "title": "旧运行/备份资料迁移预览与选择",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "memory-migration",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K54",
+    "title": "显式跨日志/目标资料迁移",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "memory-migration",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K55",
+    "title": "归档和备份完整性验证",
+    "page": "memory",
+    "availability": "connected",
+    "workflow": "backup",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K56",
+    "title": "条数、字节、上下文与选择上限",
+    "page": "memory",
+    "availability": "internal",
+    "workflow": "memory-capacity",
+    "tab": "catalog",
+    "description": "条数/字节/上下文边界自动执行；无容量治理面板。",
+    "baseline": "流程覆盖",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K57",
+    "title": "跨仓库/跨worktree自动共享知识",
+    "page": "memory",
+    "availability": "preview",
+    "workflow": "memory-sharing",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K58",
+    "title": "跨机器/手机ChatGPT/Codex记忆同步",
+    "page": "memory",
+    "availability": "preview",
+    "workflow": "memory-sync",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K59",
+    "title": "检索召回率与短/长上下文消融",
+    "page": "memory",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "作者检索/消融/真实模型评测及收益命题；普通页面按钮不代表效果已成立。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K60",
+    "title": "真实模型记忆试运行",
+    "page": "memory",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "作者检索/消融/真实模型评测及收益命题；普通页面按钮不代表效果已成立。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K61",
+    "title": "普遍提高复杂仓库修复率/降低费用",
+    "page": "memory",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "作者检索/消融/真实模型评测及收益命题；普通页面按钮不代表效果已成立。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "K62",
+    "title": "记忆轻量化与重复核验优化",
+    "page": "memory",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "轻量化/重复核验优化需先实测；不要求为内部优化制造按钮。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L01",
+    "title": "运行JSON与Markdown报告",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "report-export",
+    "tab": "catalog",
+    "description": "已有原库/CLI能力已接网页，读取实际服务定义，预览输入与影响后明确确认执行；原路径、容量、锁和审阅边界保持。",
+    "baseline": "已接线",
+    "relatedWorkflows": [
+      "dashboard"
+    ]
+  },
+  {
+    "id": "L02",
+    "title": "问题/计划/run/候选/审批/Issue关联",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L03",
+    "title": "测试命令、退出码、Diff与回退原因",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L04",
+    "title": "规划调用与执行新增调用分开",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "activity-stream",
+    "tab": "catalog",
+    "description": "选中原维护任务查看已有阶段/工具/usage回执；未提供字段保持未知，完整流式订阅尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开原任务活动与用量"
+      }
+    ]
+  },
+  {
+    "id": "L05",
+    "title": "实时阶段/读取路径/请求与token快照",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "activity-stream",
+    "tab": "catalog",
+    "description": "选中原维护任务查看已有阶段/工具/usage回执；未提供字段保持未知，完整流式订阅尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开原任务活动与用量"
+      }
+    ]
+  },
+  {
+    "id": "L06",
+    "title": "截断、不完整、未知与失败保留",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "activity-stream",
+    "tab": "catalog",
+    "description": "选中原维护任务查看已有阶段/工具/usage回执；未提供字段保持未知，完整流式订阅尚未实现。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "tasks",
+        "tab": "catalog",
+        "label": "打开原任务活动与用量"
+      }
+    ]
+  },
+  {
+    "id": "L07",
+    "title": "来源/源码/输入/报告SHA证据",
+    "page": "tasks",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L08",
+    "title": "离线HTML仪表盘",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "dashboard",
+    "tab": "catalog",
+    "description": "复用原离线仪表盘库，从已有运行目录生成新HTML并认证下载，不覆盖原证据。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L09",
+    "title": "对照汇总/展示结果",
+    "page": "overview",
+    "availability": "connected",
+    "workflow": "comparison",
+    "tab": "catalog",
+    "description": "复用原对照摘要校验，读取已有summary.json并下载摘要JSON/Markdown，不运行对照或模型。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L10",
+    "title": "原证据与历史失败归档",
+    "page": "tasks",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "开发证据/历史失败归档不是普通用户功能按钮；不因页面无入口判后端未实现。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L11",
+    "title": "当前Git版本与服务代码漂移",
+    "page": "service",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "服务页受控刷新实际runtime/漂移与活动条件，跟踪原停止job，拒绝后可核对重试；断连保持未知，独立服务沿原can_stop能力。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "L12",
+    "title": "全局任务/跨仓库效果与成本面板",
+    "page": "overview",
+    "availability": "preview",
+    "workflow": "global-metrics",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M01",
+    "title": "面向一次变化的语义代码审查",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "code-review",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M02",
+    "title": "发现绑定具体位置/触发/影响/证据",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "review-findings",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M03",
+    "title": "空发现与审查失败正确区分",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "code-review",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M04",
+    "title": "问题严重程度与证据状态分开",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "review-findings",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M05",
+    "title": "变化审查→现有隔离修复",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "review-findings",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M06",
+    "title": "候选补丁独立复审",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "patch-review",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M07",
+    "title": "PR完整详情、Diff和专用审查",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "pr-review",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；扩展交互使用本地预览，不执行。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M08",
+    "title": "CI深度调查",
+    "page": "tasks",
+    "availability": "mixed",
+    "workflow": "ci-investigation",
+    "tab": "catalog",
+    "description": "已接原CI精确Run/Attempt/Job只读证据；分析/可比结论按实际来源、可信回执与覆盖范围展示。",
+    "baseline": "部分适配",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M09",
+    "title": "依赖分析与兼容风险",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "dependency-analysis",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M10",
+    "title": "自动依赖升级维护",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "dependency-upgrade",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M11",
+    "title": "文档维护任务",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "documentation",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M12",
+    "title": "仓库健康/定期报告",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "health-report",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M13",
+    "title": "安全告警与漏洞修补",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "security",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M14",
+    "title": "架构治理/技术债建议",
+    "page": "tasks",
+    "availability": "preview",
+    "workflow": "architecture",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M15",
+    "title": "多worktree协同任务",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "worktree-collaboration",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": [
+      "conflicts"
+    ]
+  },
+  {
+    "id": "M16",
+    "title": "MCP/外部工具接入",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "mcp",
+    "tab": "catalog",
+    "description": "本候选repocare mcp已提供标准stdio服务，供外部Agent读取原Gateway/已连接工作区/原作业/同一教程；明确--allow-plan才可向原授权workspace提交方案任务，保留原Pi/Policy/账及网页审批。未提供导入任意外部MCP工具、任意HTTP/Shell、审批/发布/合并或全部MCP扩展；当前mcp表单仍为这些扩展的本地设计预览。",
+    "baseline": "无交互",
+    "relatedWorkflows": [],
+    "nativeLinks": []
+  },
+  {
+    "id": "M17",
+    "title": "多Agent分工编排",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "agents",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M18",
+    "title": "外部CLI协作（反重力等）",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "external-cli",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M19",
+    "title": "受控可执行Skill/插件装载",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "skills",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "M20",
+    "title": "模型/策略自动成本性能路由",
+    "page": "configuration",
+    "availability": "preview",
+    "workflow": "model-routing",
+    "tab": "catalog",
+    "description": "提供专属输入、校验和本地预览；执行能力尚未接通。",
+    "baseline": "无交互",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N01",
+    "title": "统一安装/启动/排错说明",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "设置旁教程可浏览、搜索并下载独立Markdown，助手get_help读取同一打包来源；正文覆盖各页用途、分步骤上手、费用/权限与失败恢复。安装后可一次setup，再用gateway前台命令启动/状态/打开/停止/重启；首次源码依赖与构建仍需按说明完成，不是自动安装/系统常驻服务。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N02",
+    "title": "core/web/dev分层依赖与自检",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N03",
+    "title": "Python/Node/Git版本要求",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N04",
+    "title": "npm精确锁与构建",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N05",
+    "title": "React/legacy两种界面",
+    "page": "service",
+    "availability": "connected",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "现有动作沿用原控制器与权限；可定位本页现有操作。",
+    "baseline": "已接线",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N06",
+    "title": "wheel含当前UI资产和许可证",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N07",
+    "title": "可选组件分开安装",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N08",
+    "title": "模型配置示例与密钥不入库",
+    "page": "configuration",
+    "availability": "mixed",
+    "workflow": "provider",
+    "tab": "catalog",
+    "description": "模型示例和Key只走本机私有配置，浏览器不持久保存/回显已存Key；新增或编辑另存新的不可变目录项，支持上下文/输出声明。用户自己输入Key并点击保存，旧任务/批准/Native/账不迁移；格式保存不是供应商连通或容量验证。",
+    "baseline": "部分适配",
+    "relatedWorkflows": [],
+    "nativeLinks": [
+      {
+        "page": "service",
+        "tab": "catalog",
+        "label": "本地检查与原会话单次响应；模型配置在设置内"
+      }
+    ]
+  },
+  {
+    "id": "N09",
+    "title": "Issue模板：Bug/想法/可执行任务",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N10",
+    "title": "Issue→认领→分支→PR→验收→关闭规范",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N11",
+    "title": "PR模板、状态交接与长期决策",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N12",
+    "title": "Windows/Linux CI声明矩阵",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N13",
+    "title": "独立分支本地整合队友代码",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N14",
+    "title": "第三方来源、许可与原创边界",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N15",
+    "title": "旧分支/失败检查治理",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "N16",
+    "title": "干净机器/跨平台完整复演",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "安装文档、自检、锁、构建/发行、协作模板、许可与CI等交付项；无须每项独立网页按钮，也不在本轮复验。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O01",
+    "title": "固定含Bug作者仓库与Mock回归",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O02",
+    "title": "修好/仍失败/回归/拒绝等场景",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O03",
+    "title": "原控制器真实Git/进程/测试回归",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O04",
+    "title": "Pi本机合成接口回放",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O05",
+    "title": "真实模型接入试运行",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O06",
+    "title": "记忆检索/长任务/消融评测",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O07",
+    "title": "SWE-bench Lite本地数据与评测路径",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O08",
+    "title": "SWE-Bench-CL历史→目标对照",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O09",
+    "title": "独立行为保持检查",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O10",
+    "title": "重犯/首轮与最终结果分别记录",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O11",
+    "title": "Live/Pro等更难任务选题",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O12",
+    "title": "防参考答案泄漏与独立裁判",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O13",
+    "title": "自动维护产品评测",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O14",
+    "title": "人工操作量、定位、闭环率和成本指标",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O15",
+    "title": "本库真实Bug＋明确功能两条主线",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O16",
+    "title": "成功与仍失败两条演示材料（T5）",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O17",
+    "title": "架构图、手册、技术说明与证据索引",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O18",
+    "title": "OPC PPT/视频/创新实践说明",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O19",
+    "title": "最终真实录制、依赖/AI披露、匿名核对",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  },
+  {
+    "id": "O20",
+    "title": "版本冻结、干净复演、成果包与正式提交",
+    "page": "service",
+    "availability": "engineering",
+    "workflow": "",
+    "tab": "catalog",
+    "description": "测试、评测、真实效果、演示及参赛材料属于独立交付验收；无普通网页入口不等于前端漏接生产API。",
+    "baseline": "工程项",
+    "relatedWorkflows": []
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "id": "syntax",
+  "kind": "syntax",
+  "issue": "Importing parser fails with SyntaxError; normalize must trim and lowercase text.",
+  "allowed_paths": ["parser.py"],
+  "readonly_paths": ["tests/test_parser.py"],
+  "expected_edits": {"parser.py": "def normalize(value):\n    return value.strip().lower()\n"}
+}

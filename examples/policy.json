@@ -1,0 +1,6 @@
+{
+  "allowed_paths": ["calculator.py"],
+  "readonly_paths": ["tests/test_calculator.py"],
+  "allowed_tests": [["{python}", "-m", "unittest", "discover", "-s", "tests", "-v"]],
+  "timeout_seconds": 30
+}

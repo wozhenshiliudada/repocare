@@ -1,0 +1,8 @@
+{
+  "id": "boundary",
+  "kind": "boundary_logic",
+  "issue": "Range membership should include lower and upper endpoints, reject outside values.",
+  "allowed_paths": ["ranges.py"],
+  "readonly_paths": ["tests/test_ranges.py"],
+  "expected_edits": {"ranges.py": "def within(value, lower, upper):\n    return lower <= value <= upper\n"}
+}

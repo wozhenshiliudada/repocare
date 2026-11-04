@@ -1,0 +1,7 @@
+{
+  "name": "repocare-optional-python-binding-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Optional static checker; not a default Agent dependency",
+  "dependencies": {"pyright": "1.1.414"}
+}

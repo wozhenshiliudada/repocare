@@ -1,0 +1,61 @@
+// Real Pi SDK, Chrome, Git and tests; only model responses/GitHub metadata are synthetic.
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {spawn,execFile} from 'node:child_process';
+import {promisify} from 'node:util';
+import {createRequire} from 'node:module';
+import {startMock} from './test/mock-server.mjs';
+const {chromium}=createRequire(import.meta.url)(process.env.PI_UI_PLAYWRIGHT_PACKAGE||'playwright');
+const root=process.argv[2];if(!root||!path.isAbsolute(root))throw new Error('NEW absolute directory required');
+await fs.mkdir(root);
+const mock=await startMock();let browser,processUI;
+const proof={passed:false,checks:[],paid_model_requests:0,live_github_requests:0,antigravity_calls:0};
+try{
+ processUI=spawn(process.env.PI_TEST_PYTHON||'python',['-u','tests/monitor_browser_fixture.py',path.join(root,'fixture'),mock.url],{stdio:['ignore','pipe','pipe']});
+ let output='';processUI.stderr.on('data',()=>{});
+ const launch=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(new Error('startup timeout')),20000);processUI.stdout.on('data',chunk=>{output+=chunk;const match=output.match(/http:\/\/127\.0\.0\.1:\d+\/#session=[a-f0-9]{64}/);if(match){clearTimeout(timer);resolve(match[0]);}});processUI.once('exit',()=>{clearTimeout(timer);reject(new Error('startup exited'));});});
+ browser=await chromium.launch({channel:'chrome',headless:true});
+ const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();
+ const errors=[];context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));page.on('pageerror',e=>errors.push(e.message));
+ await context.grantPermissions(['notifications'],{origin:new URL(launch).origin});
+ await context.addInitScript(()=>{window.notificationEvidence=[];const Native=window.Notification;window.Notification=class extends Native{constructor(title,options){super(title,options);window.notificationEvidence.push({title,body:options.body,tag:options.tag});}};});
+ await page.goto(launch);await page.locator('#notice').filter({hasText:'选择本地仓库'}).waitFor();
+ assert.equal(mock.requests.length,0);assert.equal(page.url(),new URL(launch).origin+'/');
+ async function click(id){await page.locator('#'+id).click();await page.waitForFunction(()=>!document.querySelector('#inspect').disabled,{timeout:30000});assert.equal(await page.locator('#notice').evaluate(el=>el.classList.contains('error')),false,await page.locator('#notice').innerText());}
+ await click('pick');await page.getByLabel('calculator.py 权限',{exact:true}).selectOption('edit');await page.getByLabel('tests/test_calculator.py 权限',{exact:true}).selectOption('read');
+ await page.locator('#monitor-interval').fill('60');await page.locator('#notify').click();await page.locator('#monitor-confirmed').check();await click('monitor-start');
+ await page.locator('.maintenance-event[data-status="awaiting_approval"]').waitFor({timeout:45000});
+ assert.equal(mock.requests.length,2);assert.match(await page.locator('#monitors').innerText(),/模型剩余额度 4/);
+ await page.waitForFunction(()=>window.notificationEvidence.length===1,{timeout:10000});
+ proof.checks.push('opt-in low-frequency automatic commit detection, red tests, real Pi proposal, notification and shared budget');
+ await page.screenshot({path:path.join(root,'desktop.png'),fullPage:true});await page.setViewportSize({width:390,height:844});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true);await page.screenshot({path:path.join(root,'mobile.png'),fullPage:true});
+ proof.checks.push('desktop and mobile UI render without horizontal overflow');await page.setViewportSize({width:1440,height:1000});
+ const child=await context.newPage();await child.goto(await page.locator('.maintenance-event a').getAttribute('href'));await child.locator('#notice').filter({hasText:'已连接'}).waitFor();
+ assert.match(await child.locator('#content').innerText(),/待审批方案/);await child.locator('#approve-plan').click();
+ await child.locator('#notice').filter({hasText:'方案审批完成'}).waitFor({timeout:60000});assert.match(await child.locator('#content').innerText(),/候选已验证/);
+ assert.equal(mock.requests.length,2);proof.checks.push('approval applies the saved exact plan, real Git isolated red-to-green, report and no extra model request');
+ await child.locator('#confirm-cleanup').check();await child.locator('#cleanup').click();await child.locator('#notice').filter({hasText:'清理候选完成'}).waitFor({timeout:30000});
+ proof.checks.push('owned candidate cleanup after review');
+ await promisify(execFile)(process.env.PI_TEST_GIT||'git',['-C',path.join(root,'fixture','source'),'commit','--allow-empty','-m','submitted new buggy revision']);
+ await page.waitForFunction(()=>document.querySelectorAll('.maintenance-event[data-status="awaiting_approval"]').length===1&&document.querySelectorAll('.maintenance-event[data-status="stale"]').length===1,null,{timeout:95000});
+ assert.equal(mock.requests.length,4);assert.match(await page.locator('#monitors').innerText(),/模型剩余额度 2/);
+ proof.checks.push('next submitted revision observed by actual 60-second timer, old event stale, same ledger used');
+ const notifications=await page.evaluate(()=>window.notificationEvidence.length);await new Promise(r=>setTimeout(r,6500));assert.equal(await page.evaluate(()=>window.notificationEvidence.length),notifications);assert.equal(mock.requests.length,4);
+ proof.checks.push('state refresh does not repeat notification or paid diagnosis');
+ await page.getByRole('button',{name:'暂停',exact:true}).click();await page.waitForFunction(()=>!document.querySelector('#inspect').disabled);assert.match(await page.locator('#monitors').innerText(),/已暂停/);
+ const pendingURL=await page.locator('.maintenance-event[data-status="awaiting_approval"] a').getAttribute('href');const paused=await context.newPage();await paused.goto(pendingURL);await paused.locator('#notice').filter({hasText:'已连接'}).waitFor();await paused.locator('#approve-plan').click();await paused.locator('#notice').filter({hasText:'监控已暂停'}).waitFor({timeout:20000});
+ proof.checks.push('pause prevents pending repair approval');
+ await page.locator('#github-url').fill('https://github.com/example/private');await click('clone');
+ await page.getByLabel('calculator.py 权限',{exact:true}).selectOption('edit');await page.getByLabel('tests/test_calculator.py 权限',{exact:true}).selectOption('read');
+ assert.equal(await page.locator('#monitor-source').inputValue(),'github');await page.locator('#monitor-confirmed').check();await click('monitor-start');
+ await page.locator('.monitor').filter({hasText:'https://github.com/example/private.git'}).locator('.maintenance-event[data-status="awaiting_approval"]').waitFor({timeout:45000});
+ assert.equal(mock.requests.length,6);assert.match(await page.locator('#monitors').innerText(),/Synthetic CI.*failure/);
+ proof.checks.push('GitHub branch and failed CI adapters feed same real Pi pending-approval pipeline with owned snapshot');
+ assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);assert.deepEqual(errors,[]);proof.checks.push('no browser storage capabilities or JavaScript errors');
+ proof.synthetic_http_requests=mock.requests.length;proof.passed=true;
+}finally{
+ if(browser)await browser.close();if(processUI){processUI.kill('SIGINT');await new Promise(resolve=>{if(processUI.exitCode!==null)resolve();else{processUI.once('exit',resolve);setTimeout(()=>{processUI.kill();resolve();},10000);}});}await mock.close();
+ await fs.writeFile(path.join(root,'proof.json'),JSON.stringify(proof,null,2));console.log(JSON.stringify(proof));
+}

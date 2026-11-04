@@ -1,0 +1,16 @@
+{
+  "workspace_max_entries": 50000,
+  "workspace_max_bytes": 1073741824,
+  "catalog_max_files": 50000,
+  "catalog_max_path_bytes": 8388608,
+  "source_context_max_files": 40,
+  "source_file_max_bytes": 262144,
+  "planning_packet_max_bytes": 67108864,
+  "discovery_max_files": 500,
+  "discovery_max_bytes": 16777216,
+  "discovery_catalog_max_entries": 50000,
+  "discovery_seconds": 120,
+  "candidate_max_rounds": 10,
+  "test_timeout_max_seconds": 1800,
+  "native_session_max_bytes": 268435456
+}

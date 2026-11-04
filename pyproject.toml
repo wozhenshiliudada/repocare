@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-maintainer"
+version = "0.1.0"
+description = "Auditable repository maintenance MVP with isolated Git candidates"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "third_party/frontend/*LICENSE", "third_party/pi/*"]
+requires-python = ">=3.11"
+dependencies = ["filelock==4.0.12", "psutil==7.2.2", "junitparser==5.0.3"]
+
+[project.optional-dependencies]
+ui = ["starlette==1.7.0", "uvicorn==0.53.0"]
+semantic = ["onnxruntime==1.20.1", "tokenizers==0.23.1", "numpy==2.3.2"]
+test = ["httpx==0.28.1"]
+
+[project.scripts]
+repo-maintainer = "repo_maintainer.cli:main"
+repocare = "repo_maintainer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+repo_maintainer = ["dashboard_assets/*", "dashboard_assets/vendor/*", "local_ui_assets/*", "workbench_assets/*", "workbench_ui/*.html", "workbench_ui/assets/*.js", "workbench_ui/assets/*.css", "workbench_ui/tutorial/index.html", "workbench_ui/tutorial/README.md", "workbench_ui/tutorial/MANIFEST.json", "workbench_ui/tutorial/images/*.jpg", "help_assets/*.md", "help_assets/*.json", "pi_runtime_limits.json", "maintenance_limits.json"]

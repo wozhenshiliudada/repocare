@@ -1,0 +1,5 @@
+diff2html 3.4.56: Copyright 2014-2016 Rodrigo Fernandes.
+Bundled jsdiff: Copyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>.
+Bundled Hogan.js: Copyright 2011 Twitter, Inc.; Apache License, Version 2.0.
+Browser bundles are redistributed without code modification.
+See LICENSE.md, diff-LICENSE, and hogan-LICENSE for full license terms.

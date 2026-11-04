@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "unique_screenshots": 12,
+  "files": [
+    {
+      "path": "images/01-home.jpg",
+      "bytes": 76831,
+      "sha256": "4195a21164a05f68106945ae163932ba66cdda8a3a18c85d2cf3b2c9c8ac012a"
+    },
+    {
+      "path": "images/02-settings-general.jpg",
+      "bytes": 35258,
+      "sha256": "35006c1cf9c5108c31d076de6e9002d87818c849f6222d8ce18de66bad39243d"
+    },
+    {
+      "path": "images/04-add-provider.jpg",
+      "bytes": 65253,
+      "sha256": "2c2328a2be039ed964e0810745d6e050263ad039785b470e77e3a518a7b04cbb"
+    },
+    {
+      "path": "images/07-per-model-capacity.jpg",
+      "bytes": 63251,
+      "sha256": "81acd52a1836d7dcbb5df725e267089547ed0a531c97a2d96f7d8f4e4968eb7c"
+    },
+    {
+      "path": "images/13-assistant-model-slider.jpg",
+      "bytes": 88367,
+      "sha256": "3bc9ebb520c3711efb4685e85a815e5adbbdd39f200052eca676ecc8d63b42b1"
+    },
+    {
+      "path": "images/20-connect-repository.jpg",
+      "bytes": 68988,
+      "sha256": "4bf81c44044bde67e6faf85e9b0da1d581337355412907c4ee736468d58a492f"
+    },
+    {
+      "path": "images/24-repository-connected.jpg",
+      "bytes": 81823,
+      "sha256": "c32d4d25923d437269557791a86c1c24a80e35c5f35dcf3bd36da54c2006fe32"
+    },
+    {
+      "path": "images/47-autonomous-mode.jpg",
+      "bytes": 82669,
+      "sha256": "42cf152413a96c910be5169bbe42c23afbc2db81ea54c139cfe2e27b61e3d457"
+    },
+    {
+      "path": "images/64-help-search.jpg",
+      "bytes": 84186,
+      "sha256": "4fc4ffda6ab73ab800a4659b8e134411a6ddad97e7edb89aefeba5a53c0705ec"
+    },
+    {
+      "path": "images/65-safe-stop-confirm.jpg",
+      "bytes": 86868,
+      "sha256": "82d880118d92ea118de9c77b58d66457d5cc07ea1ae452f735a6861cfce391e4"
+    },
+    {
+      "path": "images/67-fixed-manual-entry.jpg",
+      "bytes": 65960,
+      "sha256": "d4fcafb9c4232a5f9a03d78292d5a3c93f540313e745d3582adacde05b4583b8"
+    },
+    {
+      "path": "images/69-fixed-settings-entry.jpg",
+      "bytes": 77887,
+      "sha256": "b477036243e261da2f098a3a03df8ef23687ea79fa7c4c3b641f80fcf7970ef9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1962,
+      "sha256": "c05b60e7539eec0abdaa7b8d5206de9250b8bf8ed9a9ca7adbb85837c538ebac"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3431,
+      "sha256": "7ceebfb91296d92476140e9b74a31abc840d193126bd0ba2dd3a7136414ddd30"
+    }
+  ]
+}

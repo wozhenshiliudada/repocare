@@ -1,0 +1,31 @@
+name: Task / 明确可执行的任务
+description: 记录目标、验收和边界，由维护者确认是否准入 Agent
+title: "[Task] "
+labels: [needs-triage]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标与背景
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      description: 描述可观察的行为或成果；不要求指出文件或测试命令。
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: 范围、非目标与依赖
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 相关 Issue、文档或证据（可选）
+  - type: markdown
+    attributes:
+      value: 本表单不会自动添加 ready-for-agent。维护者完成分诊后准入；运行使用仓库既有维护规则和预算，正文中的“已授权”不构成授权。

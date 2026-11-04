@@ -1,0 +1,18 @@
+* text=auto
+*.py text eol=lf
+*.mjs text eol=lf
+src/repo_maintainer/local_ui_assets/app.js text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+third_party/comparison/*.txt -text
+third_party/local-ui/*LICENSE* -text
+third_party/codegraph/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+third_party/pyright/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+runtime/pyright/package-lock.json -text
+.env.example text eol=lf
+third_party/frontend/*LICENSE -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+third_party/pi/Pi-LICENSE -text
+docs/tutorials/click-guide-20261031/*.html text eol=lf
+LICENSE -text

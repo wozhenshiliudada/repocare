@@ -1,0 +1,8 @@
+{
+  "id": "config",
+  "kind": "configuration",
+  "issue": "Configuration load fails: max_items should be integer 10, preserve validation logic.",
+  "allowed_paths": ["settings.json"],
+  "readonly_paths": ["settings.py", "tests/test_settings.py"],
+  "expected_edits": {"settings.json": "{\"max_items\": 10}\n"}
+}

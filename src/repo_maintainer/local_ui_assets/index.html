@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="Pi · 仓库维护工作台">Pi · 仓库维护工作台</title><link rel="stylesheet" href="/diff2html.min.css"><link rel="stylesheet" href="/style.css">
+<script defer src="/diff2html.min.js"></script><script defer src="/session-access.js"></script><script defer src="/app.js"></script></head>
+<body><header><div class="brand">Pi<span data-i18n="仓库维护工作台">仓库维护工作台</span></div><a id="repository-picker" hidden data-i18n="选择仓库">选择仓库</a><div class="pill" data-i18n="本机审批会话">本机审批会话</div></header>
+<main><aside><div class="eyebrow" data-i18n="新任务">新任务</div><h1 data-i18n="让修改有据可查。">让修改有据可查。</h1>
+<p data-i18n="先审方案，再验证候选。发布分支需要你另行批准。">先审方案，再验证候选。发布分支需要你另行批准。</p>
+<label for="issue" data-i18n="需要修复的问题">需要修复的问题</label><textarea id="issue" maxlength="2000" rows="5" placeholder="描述这个仓库中的问题或失败测试" data-i18n-placeholder="描述这个仓库中的问题或失败测试"></textarea>
+<p class="small" data-i18n="本次只检查下方授权文件，尚不支持完整全库扫描。建议描述具体报错、失败测试或预期行为；范围以连接时确认的配置为准。">本次只检查下方授权文件，尚不支持完整全库扫描。建议描述具体报错、失败测试或预期行为；范围以连接时确认的配置为准。</p>
+<button id="plan" class="primary" data-i18n="生成待审批方案">生成待审批方案</button><button id="auto" hidden data-i18n="在授权范围内自主修复">在授权范围内自主修复</button>
+<p class="small" data-i18n="人工审批每次执行一轮；自主模式仅按启动时授权的范围运行。">人工审批每次执行一轮；自主模式仅按启动时授权的范围运行。</p>
+<div id="configuration" class="configuration"></div><div id="service-version" class="configuration"></div><details id="budget-panel"><summary data-i18n="调整请求总上限">调整请求总上限</summary><p class="small" data-i18n="增加总上限，保留已经计量和消费未知的额度。不会自动运行任务。">增加总上限，保留已经计量和消费未知的额度。不会自动运行任务。</p><label for="budget-total" data-i18n="新的总上限">新的总上限</label><input id="budget-total" type="number" min="1" max="100" value="100"><button id="budget-preview" class="quiet" data-i18n="预览额度变化">预览额度变化</button><div id="budget-preview-result"></div></details><details id="memory-panel"><summary data-i18n="来源记忆">来源记忆</summary><div id="memory-configuration"></div><button id="memory-preview" class="quiet" hidden data-i18n="预览此问题的记忆出处">预览此问题的记忆出处</button><div id="memory-preview-result"></div></details><hr><h2 data-i18n="本次会话">本次会话</h2><nav id="items"></nav>
+<details id="structure-panel"><summary data-i18n="代码结构出处">代码结构出处</summary><div id="structure-configuration"></div><label for="structure-query" data-i18n="查找符号或相对路径">查找符号或相对路径</label><input id="structure-query" maxlength="128" value="add"><button id="structure-preview" class="quiet" hidden data-i18n="查询结构出处">查询结构出处</button><div id="structure-preview-result"></div></details>
+<details id="experience-panel"><summary data-i18n="仓库经验记忆">仓库经验记忆</summary><div id="experience-controls"></div><div id="experience-entries"></div></details>
+<details id="knowledge-panel"><summary data-i18n="工程知识与方法">工程知识与方法</summary><div id="knowledge-controls"></div><div id="knowledge-entries"></div></details>
+<details id="context-panel"><summary data-i18n="长任务上下文整理">长任务上下文整理</summary><div id="context-controls"></div><div id="context-tasks"></div></details>
+<details id="maintenance-panel"><summary data-i18n="维护进度与待办">维护进度与待办</summary><div id="maintenance-controls"></div><div id="maintenance-items"></div></details>
+<details id="catalog-panel"><summary data-i18n="统一记忆查询">统一记忆查询</summary><p class="small" data-i18n="使用上方问题查找各类出处。查询不调用模型，不改变已选资料或审批。">使用上方问题查找各类出处。查询不调用模型，不改变已选资料或审批。</p><button id="catalog-query" class="quiet" data-i18n="查询相关记忆">查询相关记忆</button><div id="catalog-result"></div></details>
+<button id="refresh" class="quiet" data-i18n="刷新状态">刷新状态</button></aside>
+<section class="workspace"><div class="eyebrow" data-i18n="审阅与操作">审阅与操作</div><div id="notice" role="status" data-i18n="正在连接本地服务…">正在连接本地服务…</div>
+<div id="activity" aria-live="polite"></div><div id="task-recovery"></div><div id="content"></div><details class="audit"><summary data-i18n="操作记录">操作记录</summary><div id="jobs"></div></details>
+<footer data-i18n="此工作台创建隔离候选和本地发布分支。合并与 GitHub 推送仍需单独处理。">此工作台创建隔离候选和本地发布分支。合并与 GitHub 推送仍需单独处理。</footer></section></main>
+</body></html>

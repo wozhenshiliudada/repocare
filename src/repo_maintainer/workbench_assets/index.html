@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="Pi · 仓库维护工作台">Pi · 仓库维护工作台</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/maintenance.css"><link rel="stylesheet" href="/diff2html.min.css"><script defer src="/diff2html.min.js"></script><script defer src="/session-access.js"></script><script defer src="/maintenance.js"></script><script defer src="/app.js"></script></head>
+<body><header><div class="brand">Pi <span data-i18n="仓库维护工作台">仓库维护工作台</span></div><span data-i18n="本机连接">本机连接</span></header>
+<div class="application"><aside id="repository-sidebar"><h2 data-i18n="仓库">仓库</h2><button id="add-repository" class="primary" data-i18n="连接仓库">连接仓库</button><nav id="repository-navigation" aria-label="切换仓库" data-i18n-aria-label="切换仓库"></nav><p class="small" data-i18n="切换视图保留任务、审批和消费记录。">切换视图保留任务、审批和消费记录。</p></aside><div class="application-content"><main id="onboarding"><div class="intro"><div class="eyebrow" data-i18n="从你的项目开始">从你的项目开始</div><h1 data-i18n="选择一个仓库。">选择一个仓库。</h1><p data-i18n="连接后确认维护范围，在独立会话中审阅方案、运行测试。">连接后确认维护范围，在独立会话中审阅方案、运行测试。</p></div>
+<div id="notice" role="status" data-i18n="正在连接本地工作台…">正在连接本地工作台…</div>
+<div class="sources"><section class="card"><h2 data-i18n="本地仓库">本地仓库</h2><p data-i18n="选择已有 Git 仓库的根文件夹。">选择已有 Git 仓库的根文件夹。</p>
+<label for="local-path" data-i18n="文件夹路径">文件夹路径</label><input id="local-path" placeholder="C:\Projects\my-app" maxlength="4096">
+<div class="buttons"><button id="pick" data-i18n="选择文件夹">选择文件夹</button><button id="inspect" class="primary" data-i18n="检查仓库">检查仓库</button></div></section>
+<section class="card"><h2 data-i18n="GitHub 仓库">GitHub 仓库</h2><p id="account" data-i18n="点击检查登录，复用本机 Git 登录状态。">点击检查登录，复用本机 Git 登录状态。</p>
+<div class="buttons"><button id="check-account" data-i18n="检查登录">检查登录</button><button id="login" data-i18n="登录 GitHub">登录 GitHub</button><button id="list-repos" data-i18n="查看我的仓库">查看我的仓库</button></div>
+<div id="device" hidden><p data-i18n="在 GitHub 页面输入一次性授权码：">在 GitHub 页面输入一次性授权码：</p><strong id="device-code"></strong> <a href="https://github.com/login/device" target="_blank" rel="noopener noreferrer" data-i18n="前往 GitHub 授权">前往 GitHub 授权</a></div>
+<label for="github-url" data-i18n="仓库地址">仓库地址</label><input id="github-url" placeholder="https://github.com/owner/repository" maxlength="250">
+<button id="clone" class="primary" data-i18n="连接并克隆">连接并克隆</button><div id="repos"></div><div id="pagination" class="buttons" hidden><button id="previous" data-i18n="上一页">上一页</button><button id="next" data-i18n="下一页">下一页</button></div></section></div>
+<section id="scope" class="card" hidden><h2 data-i18n="确认检查方式">确认检查方式</h2><div id="repository-summary"></div>
+<p data-i18n="我们先找出这个项目已有的检查方法。下方建议尚未执行；确认后，修复仍需审批。">我们先找出这个项目已有的检查方法。下方建议尚未执行；确认后，修复仍需审批。</p>
+<div id="check-recommendations"></div><div id="check-warnings" class="small"></div>
+<h3 data-i18n="建议维护范围">建议维护范围</h3><div id="scope-summary"></div>
+<p class="small" id="scope-capacity" data-i18n="仅将确认的文件提供给模型；文件容量以当前服务配置为准。测试默认只读，建议可在高级设置调整。">仅将确认的文件提供给模型；文件容量以当前服务配置为准。测试默认只读，建议可在高级设置调整。</p>
+<details id="advanced-checks"><summary data-i18n="高级设置：自定义命令与文件范围">高级设置：自定义命令与文件范围</summary>
+<label for="file-filter" data-i18n="筛选文件">筛选文件</label><input id="file-filter" placeholder="输入文件名" maxlength="200" data-i18n-placeholder="输入文件名"><div id="files"></div><div class="buttons"><button id="file-prev" data-i18n="上一页文件">上一页文件</button><span id="file-page"></span><button id="file-next" data-i18n="下一页文件">下一页文件</button></div>
+<label for="test-command" data-i18n="自定义检查命令（JSON 参数数组）">自定义检查命令（JSON 参数数组）</label><textarea id="test-command" rows="3" spellcheck="false" placeholder='例如 [["{python}","-m","unittest","discover","-s","tests","-v"]]' data-i18n-placeholder="例如 [[&quot;{python}&quot;,&quot;-m&quot;,&quot;unittest&quot;,&quot;discover&quot;,&quot;-s&quot;,&quot;tests&quot;,&quot;-v&quot;]]"></textarea>
+<p class="small" data-i18n="内层数组是一条命令，每个参数单独填写。修改此处将采用自定义检查；不会自动安装依赖。">内层数组是一条命令，每个参数单独填写。修改此处将采用自定义检查；不会自动安装依赖。</p>
+<label for="test-timeout" data-i18n="每条测试超时（秒）">每条测试超时（秒）</label><input id="test-timeout" type="number" min="1" max="1800" value="60">
+</details>
+<label class="check"><input id="auto-mode" type="checkbox" disabled><span data-i18n="允许在选定范围内自主修复">允许在选定范围内自主修复</span></label>
+<label class="check"><input id="confirmed" type="checkbox"><span data-i18n="我确认检查方式和维护范围；后续生成方案会使用本地模型配置并可能计费">我确认检查方式和维护范围；后续生成方案会使用本地模型配置并可能计费</span></label>
+<button id="connect" class="primary" data-i18n="确认并打开维护工作台">确认并打开维护工作台</button><div id="launch"></div>
+<div class="readonly-entry"><h3 data-i18n="也可以先了解项目">也可以先了解项目</h3><p data-i18n="没有测试或暂时不准备修复？先做本地只读分析：查看检查线索、最多20个 Python 文件的语法和验证缺口。不会调用模型、执行项目或修改文件。">没有测试或暂时不准备修复？先做本地只读分析：查看检查线索、最多20个 Python 文件的语法和验证缺口。不会调用模型、执行项目或修改文件。</p>
+<button id="analyze-repo" data-i18n="先只读分析">先只读分析</button><div id="readonly-report" aria-live="polite"></div></div></section>
+<section id="monitor-setup" class="card" hidden><h2 data-i18n="自动维护：监控指定分支">自动维护：监控指定分支</h2>
+<p data-i18n="检测提交并运行上述测试；发现失败后自动生成方案，修改前仍需你批准。检测使用独立快照，仅检查已提交的代码。">检测提交并运行上述测试；发现失败后自动生成方案，修改前仍需你批准。检测使用独立快照，仅检查已提交的代码。</p>
+<label for="monitor-source" data-i18n="监控来源">监控来源</label><select id="monitor-source"><option value="local" data-i18n="本地分支提交">本地分支提交</option><option value="github" data-i18n="GitHub 远程分支（复用登录）">GitHub 远程分支（复用登录）</option></select>
+<label for="monitor-branch" data-i18n="分支名">分支名</label><input id="monitor-branch" maxlength="150" placeholder="main">
+<label for="monitor-interval" data-i18n="检查间隔（秒，最少60）">检查间隔（秒，最少60）</label><input id="monitor-interval" type="number" min="60" max="3600" value="300">
+<label class="check"><input id="monitor-confirmed" type="checkbox"><span data-i18n="允许持续检查此分支、执行已选测试，并按本地模型配置自动诊断；同一仓库共享监控请求额度，修改必须另外审批">允许持续检查此分支、执行已选测试，并按本地模型配置自动诊断；同一仓库共享监控请求额度，修改必须另外审批</span></label>
+<button id="monitor-start" class="primary" data-i18n="启用自动维护">启用自动维护</button><p class="small" data-i18n="程序保持运行时有效。暂停后不发起新检查，已开始的有界任务会完成。固定范围和额度不会随新提交或重启重置。">程序保持运行时有效。暂停后不发起新检查，已开始的有界任务会完成。固定范围和额度不会随新提交或重启重置。</p></section>
+<section class="card"><h2 data-i18n="维护待办">维护待办 <span id="maintenance-count">0</span></h2><p id="maintenance-status" role="status" data-i18n="尚未启用自动维护。">尚未启用自动维护。</p>
+<button id="notify" data-i18n="启用本浏览器通知">启用本浏览器通知</button><div id="monitors"></div><p class="small" data-i18n="页面中的待办始终可查看。浏览器通知需允许权限且保持页面打开；没有邮件、手机推送或云端后台。">页面中的待办始终可查看。浏览器通知需允许权限且保持页面打开；没有邮件、手机推送或云端后台。</p></section>
+<section class="card"><h2 data-i18n="已打开的仓库">已打开的仓库</h2><div id="sessions"></div><p class="small" data-i18n="每个仓库保留自己的请求额度和运行记录。切换仓库不会继续执行旧审批，也不会自动合并或推送。">每个仓库保留自己的请求额度和运行记录。切换仓库不会继续执行旧审批，也不会自动合并或推送。</p></section>
+<footer data-i18n="GitHub 登录在官方页面完成，凭据由本机 Git Credential Manager 管理。此页面不收集 GitHub 密码或 API Key。">GitHub 登录在官方页面完成，凭据由本机 Git Credential Manager 管理。此页面不收集 GitHub 密码或 API Key。</footer></main><section id="maintenance-views" aria-label="仓库维护" data-i18n-aria-label="仓库维护"></section></div></div></body></html>

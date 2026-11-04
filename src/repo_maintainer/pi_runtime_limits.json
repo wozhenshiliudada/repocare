@@ -1,0 +1,6 @@
+{
+  "max_output_tokens": 128000,
+  "max_requests": 500,
+  "planning_timeout_seconds": 3600,
+  "parent_timeout_grace_seconds": 15
+}

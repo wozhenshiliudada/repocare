@@ -1,0 +1,8 @@
+{
+  "id": "repeat",
+  "kind": "off_by_one",
+  "issue": "repeat(text, n) must return text concatenated exactly n times; zero repetitions should yield empty string.",
+  "allowed_paths": ["repeat.py"],
+  "readonly_paths": ["tests/test_repeat.py"],
+  "expected_edits": {"repeat.py": "def repeat(text, times):\n    result = \"\"\n    for _ in range(times):\n        result += text\n    return result\n"}
+}

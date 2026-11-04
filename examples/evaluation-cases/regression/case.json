@@ -1,0 +1,8 @@
+{
+  "id": "regression",
+  "kind": "regression_guard",
+  "issue": "A 20% discount on 100 must leave 80, with no-discount and full-discount behaviors preserved.",
+  "allowed_paths": ["prices.py"],
+  "readonly_paths": ["tests/test_prices.py"],
+  "expected_edits": {"prices.py": "def apply_discount(price, fraction):\n    return round(price * (1 - fraction), 2)\n"}
+}
