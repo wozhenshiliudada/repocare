@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import memory_repeat_evaluation as evaluation
 from memory_repeat_cases import CASES, KIND, PRESERVATION, feature_tests, fixture
 from memory_repeat_judge import names, run_probe, snapshot, verified
-from repo_maintainer.models import digest
+from repo_maintainer.models import SafetyError, digest
 
 def receipt(case='nested_group', bad=False, errors=False):
     groups = {}
@@ -97,6 +97,7 @@ class ScopeTests(unittest.TestCase):
             (root / 'manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
             with self.assertRaises(ValueError): snapshot(root, 'nested_group', source)
 
+    @unittest.skipUnless(evaluation.OLD.exists(), 'Private historical evaluation archive is unavailable')
     def test_original_mimo_failure_is_projected_without_importing_old_permissions(self):
         notes, proof = evaluation.historical_notes()
         text = notes[evaluation.RELATED]
@@ -104,6 +105,45 @@ class ScopeTests(unittest.TestCase):
         self.assertIn('test_python_basic', text)
         self.assertFalse(proof[evaluation.RELATED]['native_episode_imported'])
         self.assertLess(len(text.encode()), 6000)
+
+    def test_historical_projection_verifies_evidence_and_grants_no_authority(self):
+        with tempfile.TemporaryDirectory() as temp:
+            archive = Path(temp)
+            pins = {}
+            for pair in ('printing', 'evalf'):
+                pair_dir = archive / 'pairs' / pair
+                episode = f'synthetic-{pair}'
+                report = pair_dir / 'state' / episode / 'report.json'
+                evaluation.save(report, {'source': 'synthetic historical test report'})
+                payload = {
+                    'classification': 'historical', 'runtime_authorized': False,
+                    'issue': f'Synthetic {pair} case',
+                    'evidence': {'report.json': digest(report.read_bytes())},
+                    'rounds': [
+                        {'number': 1, 'verification': 'failed', 'diagnosis': 'First attempt regressed',
+                         'failure_excerpt': 'test_python_basic failed', 'test_exits': [1]},
+                        {'number': 2, 'verification': 'passed', 'diagnosis': 'Regression corrected',
+                         'test_exits': [0]},
+                    ],
+                }
+                entry = {'payload': payload, 'payload_sha256': evaluation.fingerprint(payload)}
+                ready = pair_dir / 'history-ready.json'
+                evaluation.save(ready, {'episode': episode, 'entry': entry, 'review_sha256': evaluation.fingerprint(entry)})
+                pins[ready.relative_to(archive).as_posix()] = digest(ready.read_bytes())
+            evaluation.save(archive / 'artifact-hashes.json', pins)
+
+            with patch.object(evaluation, 'OLD', archive):
+                notes, proof = evaluation.historical_notes()
+                text = notes[evaluation.RELATED]
+                for expected in ('Round 1: failed', 'Round 2: passed', 'test_python_basic', 'no execution authority'):
+                    self.assertIn(expected, text)
+                self.assertLess(len(text.encode()), 6000)
+                self.assertEqual('historical', proof[evaluation.RELATED]['classification'])
+                self.assertFalse(proof[evaluation.RELATED]['native_episode_imported'])
+                report = archive / 'pairs/printing/state/synthetic-printing/report.json'
+                report.write_bytes(b'{"source":"tampered"}')
+                with self.assertRaisesRegex(SafetyError, 'Original historical report changed'):
+                    evaluation.historical_notes()
 
     def test_paid_stage_requires_new_authorization_before_session(self):
         with tempfile.TemporaryDirectory() as temp, patch.object(evaluation, 'checked', return_value={'cells': []}), \
