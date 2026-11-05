@@ -6,11 +6,22 @@ permissions:
   contents: read
 jobs:
   test:
+    name: ${{ format('test ({0}, {1}){2}', matrix.os, matrix.python, matrix.os == 'windows-latest' && format(' [{0}/4]', matrix.shard) || '') }}
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
         python: ['3.11', '3.13']
+        shard: [1]
+        # A full Windows Python suite exceeds a hosted job's six-hour limit.
+        # Each environment retains every case across four independent runners.
+        include:
+          - {os: windows-latest, python: '3.11', shard: 2}
+          - {os: windows-latest, python: '3.11', shard: 3}
+          - {os: windows-latest, python: '3.11', shard: 4}
+          - {os: windows-latest, python: '3.13', shard: 2}
+          - {os: windows-latest, python: '3.13', shard: 3}
+          - {os: windows-latest, python: '3.13', shard: 4}
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -42,8 +53,24 @@ jobs:
           "TMP=$temporary" >> $env:GITHUB_ENV
           "TMPDIR=$temporary" >> $env:GITHUB_ENV
       - run: python -m unittest discover -s tests -v
+        if: runner.os != 'Windows'
+      - name: Run Python tests (part ${{ matrix.shard }}/4)
+        if: runner.os == 'Windows'
+        run: python scripts/ci_unittest.py --shard ${{ matrix.shard }} --shards 4 --report .demo/ci-results/python-${{ matrix.shard }}.json
       - run: npm test
+        if: matrix.shard == 1
         working-directory: runtime/pi
       - run: python maintain.py demo --directory .demo/ci
+        if: matrix.shard == 1
       - run: python maintain.py evaluate --directory .demo/ci-evaluation
+        if: matrix.shard == 1
       - run: node runtime/pi/integration-replay.mjs --directory .demo/ci-integration
+        if: matrix.shard == 1
+      - name: Preserve Python coverage and timing receipts
+        if: always() && runner.os == 'Windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-windows-${{ matrix.python }}-part-${{ matrix.shard }}
+          path: .demo/ci-results/*.json
+          include-hidden-files: true
+          if-no-files-found: error
