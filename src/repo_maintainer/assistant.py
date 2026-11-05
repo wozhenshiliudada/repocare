@@ -49,7 +49,7 @@ def catalog_integrity(root):
             raise SafetyError('会话目录归属或原catalog缺失；保留记录，不重建额度')
     elif root.exists() and any(root.iterdir()):
         raise SafetyError('会话目录缺少原归属；不接管或重建已有记录')
-    return marker
+    return root, marker
 
 
 def _identifier(value):
@@ -140,17 +140,15 @@ class AssistantControl:
         self.process=None
 
     def _head(self):
-        if self.head is not None:
-            catalog_integrity(self.root)
+        root,marker=catalog_integrity(self.root)
         if self.head is None:
-            marker=catalog_integrity(self.root)
             if not marker.exists():
                 with marker.open('x',encoding='utf-8') as stream:
                     os.chmod(marker,0o600)
-                    json.dump({'schema_version':1,'root':str(self.root)},stream)
+                    json.dump({'schema_version':1,'root':str(root)},stream)
                     stream.flush();os.fsync(stream.fileno())
-            self.head=UIRegistry(unlinked(self.root/'catalog'),{'schema_version':1,'purpose':'conversation-catalog-v1',
-                'root':str(self.root),'provider':{'request_budget':0}})
+            self.head=UIRegistry(unlinked(root/'catalog'),{'schema_version':1,'purpose':'conversation-catalog-v1',
+                'root':str(root),'provider':{'request_budget':0}})
         return self.head
 
     def _ledger(self,profile):

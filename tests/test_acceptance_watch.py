@@ -18,7 +18,8 @@ from repo_maintainer.repository_workbench import create_workbench_app, validate_
 class AcceptanceWatchTests(unittest.TestCase):
     def setUp(self):
         parent=fixtures.MonitorAcceptanceTests()
-        parent.setUp();self.addCleanup(parent.doCleanups)
+        self.addCleanup(parent.doCleanups)
+        parent.setUp()
         self.parent,self.case,self.remote=parent,parent.case,parent.remote
         self.manager=self.case.hub.monitor.acceptance_watch
         self.time=self.manager.clock().replace(microsecond=0)

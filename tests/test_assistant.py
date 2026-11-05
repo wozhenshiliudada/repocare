@@ -173,6 +173,33 @@ class AssistantTests(unittest.TestCase):
         self.assertEqual([], self.model.requests)
         self.assert_no_business_calls()
 
+    @unittest.skipUnless(os.name == 'nt', 'Windows short-path alias regression')
+    def test_short_path_catalog_reopens_under_canonical_path_without_reset(self):
+        import ctypes
+        from ctypes import wintypes
+        kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+        kernel.GetShortPathNameW.argtypes=[wintypes.LPCWSTR,wintypes.LPWSTR,wintypes.DWORD]
+        buffer=ctypes.create_unicode_buffer(32768)
+        self.assertTrue(kernel.GetShortPathNameW(str(self.root),buffer,len(buffer)))
+        short=Path(buffer.value)
+        if str(short).lower()==str(self.root.resolve()).lower():
+            self.skipTest('This volume does not expose an 8.3 alias')
+        self.control.close()
+        self.hub.root=short
+        self.control=AssistantControl(self.hub,mock_url=self.model.url)
+        identity=self.create()
+        record=self.record(identity)
+        self.control.close()
+        marker=self.root/'assistant-binding.json'
+        before=marker.read_bytes()
+        self.hub.root=self.root.resolve()
+        self.control=AssistantControl(self.hub,mock_url=self.model.url)
+        self.assertEqual(self.record(identity),record)
+        self.assertEqual(marker.read_bytes(),before)
+        self.assertEqual(len(self.control.view()['sessions']),1)
+        self.assertEqual(self.model.requests,[])
+        self.assert_no_business_calls()
+
     def test_real_pi_multiturn_help_draft_restart_and_exact_operation_dedup(self):
         identity = self.create()
         first, payload = self.send(identity, '普通问题')

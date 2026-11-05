@@ -72,11 +72,15 @@ def static_state(directory,record,source,candidate,policy,origin):
     require(files==execution['checkpoint']['inventory'],'Original candidate/dependency files changed')
     binding,grant=origin['binding'],origin['grant']
     if origin['plan']['runtime']=='python':
-        python=unlinked(directory/'environment/venv'/('Scripts/python.exe' if os.name=='nt' else 'bin/python'))
-        site=unlinked(Path(binding['runtime']['site']))
-        require(site.is_relative_to(directory/'environment/venv')
-                and Path(binding['runtime']['executable'])==python,'Original venv path differs')
-        require(digest(python.read_bytes())==binding['runtime_executable_sha256'],
+        venv=unlinked(directory/'environment/venv')
+        python=unlinked(venv/('Scripts/python.exe' if os.name=='nt' else 'bin/python'))
+        runtime=binding['runtime']
+        site=unlinked(Path(runtime['site']))
+        require(site.is_relative_to(venv)
+                and unlinked(Path(runtime['executable']))==python,'Original venv path differs')
+        # Legacy receipts have only the shared hash and retain that check.
+        venv_sha256=runtime.get('venv_executable_sha256',binding['runtime_executable_sha256'])
+        require(digest(python.read_bytes())==venv_sha256,
                 'Original venv executable changed')
         dependencies=inventory(site)
         executable=unlinked(Path(grant['python']))

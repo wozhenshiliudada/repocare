@@ -116,11 +116,12 @@ def _windows_security(path, *, protect=False, directory=False):
     if protect:
         descriptor = pointer()
         inheritance = 'OICI' if directory else ''
-        sddl = f'D:P(A;{inheritance};FA;;;SY)(A;{inheritance};FA;;;{sid})'
+        # A new file can default to a group owner under an elevated token.
+        sddl = f'O:{sid}D:P(A;{inheritance};FA;;;SY)(A;{inheritance};FA;;;{sid})'
         if not advapi.ConvertStringSecurityDescriptorToSecurityDescriptorW(sddl, 1, ctypes.byref(descriptor), None):
             raise SafetyError('无法保护本机配置的私有权限')
         try:
-            if not advapi.SetFileSecurityW(str(path), 0x80000004, descriptor):
+            if not advapi.SetFileSecurityW(str(path), 0x80000005, descriptor):
                 raise SafetyError('无法保护本机配置的私有权限')
         finally:
             kernel.LocalFree(descriptor)

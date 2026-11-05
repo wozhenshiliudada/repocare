@@ -62,7 +62,9 @@ class AcceptanceRemote:
 
 class MonitorAcceptanceTests(unittest.TestCase):
     def setUp(self):
-        self.case=fixtures.MonitorDeliveryTests();self.case.setUp();self.addCleanup(self.case.doCleanups)
+        self.case=fixtures.MonitorDeliveryTests()
+        self.addCleanup(self.case.doCleanups)
+        self.case.setUp()
         self.case.pushed();p=self.case.worker(self.case.service.prepare,self.case.rid)
         if 'unknown' in self._testMethodName:self.case.remote.mode='write_timeout'
         try:self.case.worker(self.case.service.create,self.case.rid,p['challenge'],approve_sha256=p['approval_sha256'],actor='fixture')

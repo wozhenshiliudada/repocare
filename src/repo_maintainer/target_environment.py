@@ -348,7 +348,7 @@ class TargetEnvironment:
             if self.plan['runtime'] == 'python':
                 runtime = self.root/'venv'
                 self.checked([self.grant['python'],'-I','-B','-m','venv','--copies',str(runtime)])
-                self.python = str(runtime/('Scripts/python.exe' if os.name == 'nt' else 'bin/python'))
+                self.python = str(unlinked(runtime/('Scripts/python.exe' if os.name == 'nt' else 'bin/python')))
                 if self.plan['python_constraint']:
                     self.checked([self.python,'-I','-B','-c',
                         'import sys,platform; from pip._vendor.packaging.specifiers import SpecifierSet; sys.exit(0 if SpecifierSet(sys.argv[1]).contains(platform.python_version()) else 2)',
@@ -430,7 +430,15 @@ class TargetEnvironment:
         if self.plan['runtime'] == 'python':
             value = json.loads(self.checked([self.python,'-I','-B','-c',
                 'import sys,sysconfig,json,platform,importlib.metadata as m; print(json.dumps({"version":sys.version,"platform":platform.platform(),"machine":platform.machine(),"executable":sys.executable,"site":sysconfig.get_path("purelib"),"packages":sorted((d.metadata["Name"],d.version) for d in m.distributions())}))']))
-            dependencies = inventory(unlinked(Path(value['site'])))
+            python = unlinked(Path(self.python))
+            site = unlinked(Path(value['site']))
+            require(unlinked(Path(value['executable'])) == python
+                    and site.is_relative_to(unlinked(self.root/'venv')), 'Prepared venv path differs')
+            previous_runtime = self.receipt.get('environment_binding', {}).get('runtime')
+            if previous_runtime is None or 'venv_executable_sha256' in previous_runtime:
+                # Windows venv uses a launcher distinct from the granted interpreter.
+                value.update(executable=str(python), site=str(site), venv_executable_sha256=digest(python.read_bytes()))
+            dependencies = inventory(site)
             executable = self.grant['python']
         else:
             value = {'node_version':self.checked([self.grant['node'],'--version']).strip()}

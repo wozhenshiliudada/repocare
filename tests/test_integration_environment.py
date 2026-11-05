@@ -1,6 +1,7 @@
 """Real offline environments and sealed commits; no provider/network calls."""
 import json
 import copy
+import os
 import subprocess
 import sys
 import tempfile
@@ -11,9 +12,8 @@ from unittest.mock import patch
 
 import test_workflow_environment as fixtures
 from repo_maintainer.integration import prepare_integration,integrate,recover_integration
-from repo_maintainer.models import SafetyError
-from repo_maintainer.models import Policy
-from repo_maintainer.target_environment import discover_environment,make_grant
+from repo_maintainer.models import Policy, SafetyError, digest
+from repo_maintainer.target_environment import TargetEnvironment,discover_environment,make_grant
 from repo_maintainer.workflow_environment import GrantedEnvironment
 from repo_maintainer.workflow import repair
 from repo_maintainer.issue_intake import fingerprint
@@ -44,6 +44,12 @@ class IntegrationEnvironmentTests(unittest.TestCase):
 
     def test_python_reuses_verified_venv_and_sealed_tests_before_separate_publication_approval(self):
         record=self.candidate()
+        origin=json.loads(self.origin_bytes)
+        binding=origin['environment_binding']
+        launcher=Path(binding['runtime']['executable'])
+        launcher_bytes=launcher.read_bytes()
+        self.assertEqual(binding['runtime']['venv_executable_sha256'],digest(launcher_bytes))
+        self.assertEqual(binding['runtime_executable_sha256'],digest(Path(origin['grant']['python']).read_bytes()))
         with (patch('repo_maintainer.integration.run_test',side_effect=AssertionError('No host interpreter fallback')),
               patch('repo_maintainer.target_environment.TargetEnvironment.prepare',side_effect=AssertionError('No reinstall'))):
             review=prepare_integration(self.owner)
@@ -55,6 +61,13 @@ class IntegrationEnvironmentTests(unittest.TestCase):
         self.assertEqual(self.origin_bytes,self.origin.read_bytes())
         self.assertEqual(self.target(),'')
         self.assertEqual(integrate(self.owner)['status'],'awaiting_approval')
+        launcher.write_bytes(launcher_bytes+b'changed')
+        try:
+            with self.assertRaisesRegex(SafetyError,'Original venv executable changed'):
+                integrate(self.owner,review['review_sha256'])
+            self.assertEqual(self.target(),'')
+        finally:
+            launcher.write_bytes(launcher_bytes)
         result=integrate(self.owner,review['review_sha256'])
         self.assertEqual(result['status'],'published')
         self.assertEqual(integrate(self.owner,review['review_sha256'])['status'],'published')
@@ -85,6 +98,33 @@ class IntegrationEnvironmentTests(unittest.TestCase):
         self.assertEqual(receipt['verification_workspace'],str(owner/'integration-verification'))
         self.assertTrue(all(p['status']=='finished' for p in review['environment_processes']))
         cleanup_run(owner)
+
+    def test_legacy_python_receipt_remains_unchanged_during_sealed_verification(self):
+        # Old valid Windows receipts used a venv launcher as the granted Python.
+        parent = self.case.case.root/'original-runtime'
+        subprocess.run([sys.executable, '-I', '-m', 'venv', '--copies', '--without-pip', str(parent)],
+                       check=True, capture_output=True, timeout=60)
+        executable = parent/('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
+        with patch('repo_maintainer.target_environment.sys.executable', str(executable)):
+            plan,grant,policy=self.case.setup_environment()
+        current_identity=TargetEnvironment.identity
+        def legacy_identity(environment):
+            binding=current_identity(environment)
+            binding['runtime'].pop('venv_executable_sha256',None)
+            return binding
+        with patch.object(TargetEnvironment,'identity',legacy_identity):
+            record=self.case.run_repair(plan,grant,policy)
+        self.assertEqual(record['status'],'candidate_ready',record.get('error'))
+        owner=Path(record['workspace']).parent
+        self.addCleanup(cleanup_run,owner)
+        receipt=owner/'environment/environment.json'
+        previous=receipt.read_bytes()
+        binding=record['environment']['binding']
+        self.assertNotIn('venv_executable_sha256',binding['runtime'])
+        review=prepare_integration(owner)
+        self.assertEqual(review['status'],'prepared',review)
+        self.assertEqual(review['review']['environment_verification']['binding'],binding)
+        self.assertEqual(receipt.read_bytes(),previous)
 
     def test_dependency_drift_before_prepare_is_blocked_and_user_bytes_are_preserved(self):
         self.candidate()
