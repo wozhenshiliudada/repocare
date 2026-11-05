@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -17,6 +18,22 @@ def redact(text: str) -> str:
             text = text.replace(value, "[REDACTED]")
     text = re.sub(r"(?i)(Bearer\s+)[A-Za-z0-9._~+/-]+", r"\1[REDACTED]", text)
     return re.sub(r"\b(?:sk-|ghp_|github_pat_)[A-Za-z0-9_-]{12,}", "[REDACTED]", text)
+
+
+def _replace_run_record(temp: Path, target: Path) -> None:
+    # A concurrent dashboard read can briefly deny replacement on Windows.
+    # Retry only this atomic rename, never the surrounding event/Git operation.
+    # Persistent denial still raises with both old record and new temp intact.
+    delays = iter((.01, .02, .04, .08, .16, .32, .5))
+    while True:
+        try:
+            temp.replace(target)
+            return
+        except PermissionError as error:
+            delay = next(delays, None)
+            if os.name != 'nt' or getattr(error, 'winerror', None) not in {5, 32} or delay is None:
+                raise
+            time.sleep(delay)
 
 
 class RunStore:
@@ -34,7 +51,7 @@ class RunStore:
         serialized = redact(json.dumps(self.record, indent=2, ensure_ascii=False))
         temp = self.directory / "run.json.tmp"
         temp.write_text(serialized + "\n", encoding="utf-8")
-        temp.replace(self.directory / "run.json")
+        _replace_run_record(temp, self.directory / "run.json")
         report = [f"# Run {self.record['run_id']}", "",
                   f"Status: **{self.record['status']}**", "",
                   f"Mode: `{self.record['mode']}`", "",
